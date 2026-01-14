@@ -560,6 +560,26 @@ echo "✅ Unimatrix dual monitor setup complete!"
 echo "   - Run 'unimatrix-simple' to start Matrix effect on both monitors"
 echo "   - Features: Japanese katakana characters, green color, large font"
 echo "   - Launcher tab controls both windows with Ctrl+C"
+echo "   - Autostart configured to run at boot time"
+
+# Create autostart entry for unimatrix
+echo "🔧 Setting up unimatrix autostart..."
+cat > ~/.config/autostart/unimatrix-simple.desktop << 'EOF'
+[Desktop Entry]
+Type=Application
+Name=Unimatrix Dual Monitor
+Comment=Start unimatrix Matrix effect on dual monitors
+Exec=/home/duck/.local/bin/unimatrix-simple
+Icon=applications-system
+Terminal=false
+Categories=System;Utility;
+X-KDE-Autostart-Phase=3
+X-KDE-StartupNotify=false
+Hidden=false
+NoDisplay=false
+EOF
+
+echo "✅ Unimatrix autostart configured"
 
 # ============================================================================
 # 13. SYSTEM CONTROL ICONS SETUP (Power Off, Reboot, Full Shutdown, Logout)
