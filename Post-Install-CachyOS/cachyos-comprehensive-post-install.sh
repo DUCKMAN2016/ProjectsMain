@@ -94,7 +94,7 @@ sudo pacman -S --noconfirm filezilla remmina doublecmd
 
 # Install utility applications
 echo "🔧 Installing utilities..."
-sudo pacman -S --noconfirm xscreensaver cool-retro-term konsole handbrake krita qbittorrent shotcut soundconverter obs-studio cmatrix asciiquarium vlc
+sudo pacman -S --noconfirm xscreensaver cool-retro-term konsole handbrake krita qbittorrent shotcut soundconverter obs-studio cmatrix asciiquarium vlc unimatrix
 
 # Note: VLC is now installed and configured
 
@@ -464,6 +464,102 @@ fi
 # Install bonsai.sh script
 sudo sh -c 'curl -o /usr/local/bin/bonsai.sh https://gitlab.com/jallbrit/bonsai.sh/-/raw/master/bonsai.sh && chmod +x /usr/local/bin/bonsai.sh'
 echo "✅ bonsai.sh installed"
+
+# ============================================================================
+# 14. UNIMATRIX DUAL MONITOR SETUP
+# ============================================================================
+echo "🟢 Setting up Unimatrix dual monitor Matrix effect..."
+
+# Create unimatrix launcher script
+echo "📜 Creating unimatrix dual monitor launcher..."
+mkdir -p ~/.local/bin
+
+cat > ~/.local/bin/unimatrix-simple << 'EOF'
+#!/bin/bash
+# Simple dual monitor unimatrix with launcher control
+
+# Check if we're already in a dedicated tab, if not, open one
+if [ -z "$UNIMATRIX_LAUNCHER" ]; then
+    export UNIMATRIX_LAUNCHER=1
+    konsole --new-tab -e bash -c "$0; exec bash" &
+    exit
+fi
+
+echo "=== Simple Dual Monitor Unimatrix ==="
+echo ""
+
+echo "Launching two unimatrix windows..."
+echo ""
+
+# Launch first unimatrix
+konsole --profile Unimatrix --hide-menubar --hide-tabbar -e unimatrix -c green -l k &
+UNIMATRIX1_PID=$!
+sleep 1
+
+# Launch second unimatrix  
+konsole --profile Unimatrix --hide-menubar --hide-tabbar -e unimatrix -c green -l k &
+UNIMATRIX2_PID=$!
+sleep 2
+
+echo ""
+echo "SETUP INSTRUCTIONS:"
+echo "1. You now have TWO unimatrix windows"
+echo "2. Drag ONE window to your second monitor"
+echo "3. Press F11 on BOTH windows to make them fullscreen"
+echo "4. Press Ctrl+C HERE to close BOTH unimatrix windows"
+echo ""
+echo "Unimatrix windows running with PIDs: $UNIMATRIX1_PID and $UNIMATRIX2_PID"
+echo "Press Ctrl+C in this launcher tab to close both windows."
+echo ""
+
+# Set up trap to clean up on exit
+cleanup() {
+    echo ""
+    echo "Closing unimatrix windows..."
+    kill $UNIMATRIX1_PID $UNIMATRIX2_PID 2>/dev/null
+    exit 0
+}
+
+trap cleanup SIGINT SIGTERM
+
+# Wait for the unimatrix processes or for user to press Ctrl+C
+wait $UNIMATRIX1_PID $UNIMATRIX2_PID 2>/dev/null
+cleanup
+EOF
+
+chmod +x ~/.local/bin/unimatrix-simple
+
+# Create unimatrix konsole profile
+echo "🔧 Creating unimatrix konsole profile..."
+mkdir -p ~/.local/share/konsole
+
+cat > ~/.local/share/konsole/Unimatrix.profile << 'EOF'
+[Appearance]
+ColorScheme=Breeze
+Font=Hack,20,-1,5,50,0,0,0,0,0
+
+[General]
+Name=Unimatrix
+Parent=FALLBACK/
+
+[Scrolling]
+HistoryMode=1
+HistorySize=1000
+
+[Terminal Features]
+BlinkingCursorEnabled=true
+EOF
+
+# Add unimatrix to PATH
+echo "🔧 Adding unimatrix to PATH..."
+if ! grep -q "export PATH.*local/bin" ~/.zshrc; then
+    echo 'export PATH="$HOME/.local/bin:$PATH"' >> ~/.zshrc
+fi
+
+echo "✅ Unimatrix dual monitor setup complete!"
+echo "   - Run 'unimatrix-simple' to start Matrix effect on both monitors"
+echo "   - Features: Japanese katakana characters, green color, large font"
+echo "   - Launcher tab controls both windows with Ctrl+C"
 
 # ============================================================================
 # 13. SYSTEM CONTROL ICONS SETUP (Power Off, Reboot, Full Shutdown, Logout)
