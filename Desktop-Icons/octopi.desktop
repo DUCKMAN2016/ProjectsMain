@@ -1,0 +1,9 @@
+[Desktop Entry]
+Version=1.0
+Type=Application
+Name=Octopi
+Comment=Arch Linux package manager
+Exec=octopi
+Icon=octopi
+Terminal=false
+Categories=System;PackageManager;

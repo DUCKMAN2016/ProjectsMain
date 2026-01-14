@@ -1,0 +1,148 @@
+total 44794688
+drwsrwsr-x 100 duck users        4096 Dec 30 22:42 .
+drwxr-xr-x   3 root root         4096 Dec 31 07:00 ..
+drwxrwsr-x   7 duck users        4096 Feb  4  2025 $RECYCLE.BIN
+-rwxrwxr-x   1 duck users    90184640 Sep 12  2024 360TS_Setup.exe
+-rwxrwxr-x   1 duck users     1533504 Sep 12  2024 360TS_Setup_Mini.exe
+-rwxrwxr-x   1 duck users     1575742 Sep 12  2024 7z2201-x64.exe
+drwxrwsr-x   7 duck users        4096 Sep 12  2024 Adobe Photoshop CS5 Extended
+drwxrwxr-x  26 duck users        4096 Nov  8  2024 All
+drwxrwsr-x   5 duck users        4096 Jul  5  2025 AmpOldServers
+drwxrwsr-x   7 duck users        4096 Dec 23  2024 AppData
+-rwxrwxr-x   1 duck users    26496761 Sep 12  2024 audacity-win-2.1.2.exe
+drwxrwsr-x   2 duck users        4096 Jan 12  2025 Backup
+-rwxrwxr-x   1 duck users        1591 Jan 11  2025 BackupProjectsMain2F.ps1
+-rwxrwxr-x   1 duck users        1778 Jan 11  2025 BackupProjectsMainScript.ps1
+-rwxrwxr-x   1 duck users        1379 Jan 11  2025 BackupTaskbar.ps1
+-rwxrwxr-x   1 duck users     1276704 Dec 23  2024 BraveBrowserSetup-BRV030.exe
+drwxrwsr-x   5 duck users        4096 Oct 29  2024 clfaz
+drwxrwsr-x   4 duck users        4096 Oct 29  2024 clfaz - Copy
+drwxrwsr-x   3 duck users        4096 Sep 12  2024 cool
+drwxrwsr-x   4 duck users        4096 Sep 14  2024 cpm
+drwxrwsr-x  20 duck users        4096 Jan 12  2025 Cursor
+drwxrwsr-x  19 duck users        4096 Jan 20  2025 CursorWrkSpc#1
+drwxrwsr-x   3 duck users        4096 Oct 13  2024 DayZ_Epoch_Client_1.0.6.2_Release(2)
+drwxrwsr-x   3 duck users        4096 Oct 13  2024 DayZ-Servers
+drwxrwsr-x   2 duck users        4096 Sep 12  2024 DD-214
+drwxrwsr-x   3 duck users        4096 Oct 12  2024 DO-WorkStuff
+drwxrwsr-x   2 duck users        4096 Sep 10  2024 DRADIS Screensaver
+drwxrwsr-x   2 duck users        4096 Sep 10  2024 DRADIS Silent Screensaver
+drwxrwsr-x  15 duck users        4096 Dec  4  2024 dx1
+drwxrwsr-x   3 duck users        4096 May 10  2025 endeavor-saves
+drwxrwsr-x   6 duck users        4096 Dec 23  2024 Enpass.backup_20241223_062931
+drwxrwsr-x   3 duck users        4096 Dec 23  2024 Enpass.backup_20241223_063114
+drwxrwsr-x   3 duck users        4096 Dec 23  2024 Enpass.backup_20241223_063303
+drwxrwsr-x   3 duck users        4096 Dec 23  2024 Enpass.backup_20241223_063526
+drwxrwsr-x   3 duck users        4096 Dec 23  2024 Enpass.backup_20241223_064118
+drwxrwsr-x   6 duck users        4096 Dec 23  2024 Enpass.backup_20241223_064534
+drwxrwsr-x   6 duck users        4096 Dec 23  2024 Enpass.backup_20241223_064857
+drwxrwsr-x   6 duck users        4096 Dec 23  2024 Enpass.backup_20241223_065128
+drwxrwsr-x  10 duck users        4096 Sep 10  2024 Family-Crest
+-rwxrwxr-x   1 duck users     6208736 Sep 12  2024 FileZilla_3.10.2_win32-setup.exe
+-rwxrwxr-x   1 duck users     6420600 Sep 12  2024 FileZilla_3.10.3_win64-setup.exe
+-rwxrwxr-x   1 duck users    25450624 Sep 12  2024 FreeCommanderXE-32-en-public_setup.exe
+drwxrwsr-x  53 duck users       36864 Oct 12  2024 frmKU
+drwxrwsr-x   3 duck users        4096 Dec 31 07:34 Frm-ST-WS
+drwxrwsr-x  13 duck users        4096 Sep 12  2024 frmWen
+drwxrwsr-x  31 duck users        4096 Jan  6  2025 FrmX-KUNAS
+drwxrwsr-x   3 duck users        4096 Sep 12  2024 fwretirement1142022meeksfranciso
+drwxrwsr-x   2 duck users        4096 Sep 10  2024 fwworkcl
+drwxrwsr-x   2 duck users        4096 Sep 10  2024 fwworkres
+drwxrwsr-x   2 duck users        4096 Sep 10  2024 fwworkretirement
+drwxrwsr-x   2 duck users        4096 Sep 10  2024 fwworksf3108
+-rwxrwxr-x   1 duck users    56499088 Sep 12  2024 GlassWireSetup.exe
+-rwxrwxr-x   1 duck users   247241851 Sep 12  2024 Gordon West Morse Code 0-5WPM.zip
+drwxrwsr-x  35 duck users        4096 Oct 12  2024 Ham-Stuff
+-rwxrwxr-x   1 duck users     9892304 Sep 12  2024 HPEasyStart_12_8_9.exe
+drwxrwsr-x  38 duck users       32768 Sep 30  2024 html
+drwxrwsr-x  18 duck users        4096 May  5  2025 IBM-Classroom
+-rwxrwxr-x   1 duck users 37580963840 Oct 15  2024 Icecast-26934k.raw
+drwxrwsr-x   2 duck users        4096 Oct 13  2024 ices
+drwxrwsr-x   3 duck users        4096 Oct 12  2024 icesmusic
+drwxrwsr-x   3 duck users        4096 Jan 10  2025 ICLAS_SERVER_DOS622
+drwxrwsr-x   6 duck users        4096 Oct 12  2024 images
+-rwxrwxr-x   1 duck users      244656 Jan 11  2025 installer_search_log.txt
+-rwxrwxr-x   1 duck users        1567 Jan 11  2025 InstallerSearchScript.ps1
+drwxrwsr-x   3 duck users        4096 May 10  2025 kubuntu-saves
+drwsrwsr-x   2 duck users       16384 Sep  2  2024 lost+found
+-rwxrwxr-x   1 duck users    19463448 Jan 12  2025 MediaCreationTool_22H2 (1).exe
+-rwxrwxr-x   1 duck users    19463448 Jan 12  2025 MediaCreationTool_22H2.exe
+drwxrwsr-x   4 duck users        4096 Jun  6  2025 Moms
+-rwxrwxr-x   1 duck users       26035 Sep 13  2024 moms-meds-xxx.odg
+-rwxrwxr-x   1 duck users      409758 Sep 12  2024 Morse Code Software(1).zip
+-rwxrwxr-x   1 duck users      409758 Sep 12  2024 Morse Code Software.zip
+drwsrwsr-x  50 duck users        4096 Dec 30 22:29 movies
+drwxrwsr-x   4 duck users       12288 Jan 27  2025 music
+drwxrwsr-x   8 duck users        4096 Feb 14  2025 myz80
+drwxrwsr-x   6 duck users        4096 Oct 12  2024 nasshare
+drwxrwsr-x   2 duck users        4096 Jan 11  2025 NetWare65-Server Clone
+drwxrwsr-x   3 duck users        4096 Jan  7  2025 NetWare-Server
+drwxrwsr-x   3 duck users        4096 Oct 13  2024 New folder (2)
+drwxrwsr-x   2 duck users        4096 Jul 18 15:27 New folder (4)
+drwxrwsr-x   4 duck users        4096 Sep 10  2024 New-Meeks-Crest
+drwxrwsr-x   2 duck users        4096 Oct 16  2024 newpics
+drwxrwsr-x  10 duck users        4096 Oct 15  2024 NewVM
+-rwxrwxr-x   1 duck users      425304 Sep 12  2024 Ninite FileZilla Firefox Notepad Installer.exe
+-rwxrwxr-x   1 duck users      425304 Sep 12  2024 Ninite WinRAR Installer.exe
+-rwxrwxr-x   1 duck users    72526528 Sep 12  2024 nomachine_8.11.3_3_x64.exe
+drwxrwsr-x   2 duck users        4096 Sep 12  2024 Office.2010.Toolkit.and.EZ-Activator.2.2.3
+drwxrwsr-x   2 duck users        4096 Sep 10  2024 oldvids
+drwsrwsr-x 105 duck users       12288 Jan 27  2025 other
+drwxrwsr-x   3 duck users        4096 Oct 12  2024 OurFam
+drwxrwsr-x   4 duck users        4096 Nov 29  2024 OutPostPmm
+drwxrwsr-x   3 duck users        4096 Oct 12  2024 pbx
+drwxrwsr-x   2 duck users        4096 Oct 12  2024 Pictures
+-rwxrwxr-x   1 duck users    81367922 Sep 25  2024 plexmediaserver_1.41.0.8994-f2c27da23_amd64.deb?_gl=1*1bcnt69*_gcl_au*NDI1ODI5NjYyLjE3MjkyMzU3MDE.*_ga*MTkwNzgyNDUxMC4xNzI5MjM0MzEz*_ga_G6FQWNSENB*MTcyOTIzNTcwMS4xLjEuMTcyOTIzNTcwNy41NC4wLjA.
+drwxrwsr-x   2 duck users        4096 May 24  2025 Projects
+drwxrwsr-x   2 duck users        4096 Sep 28  2024 qsl
+-rwxrwxr-x   1 duck users      140761 Sep 12  2024 qsl-W7FOM.png
+-rwxrwxr-x   1 duck users   102299252 Aug 20  2024 Radarr.master.5.9.1.9070.linux-core-x64.tar.gz
+drwxrwsr-x   3 duck users        4096 Oct 25 07:42 Rainbow
+drwxrwsr-x   2 duck users        4096 Jan 11  2025 RDCMan
+drwxrwsr-x   3 duck users        4096 Jan 14  2025 Recovery
+-rwxrwxr-x   1 duck users           0 Jan 13  2025 Recovery.txt
+drwxrwsr-x   3 duck users        4096 Sep 12  2024 retire
+drwxrwsr-x   2 duck users        4096 Oct 12  2024 retirementletterandadditionalinformation (1)
+drwxrwsr-x   5 duck users        4096 Sep 22  2024 rt-systems
+drwxrwsr-x   5 duck users        4096 Sep 10  2024 SAM
+drwxrwsr-x   3 duck users        4096 Oct 13  2024 SBBSCC2
+drwxrwsr-x   2 duck users        4096 Sep 29  2024 scans
+-rwxrwxr-x   1 duck users    15335408 Sep 12  2024 setup_dzlauncher.exe
+-rwxrwxr-x   1 duck users    22797672 Jan 12  2025 Setup.exe
+-rwxrwxr-x   1 duck users    12232416 Sep 12  2024 sm8-setup.exe
+-rwxrwxr-x   1 duck users   100849532 Aug 25  2024 Sonarr.main.4.0.9.2244.linux-x64.tar.gz
+-rwxrwxr-x   1 duck users      232872 Sep 12  2024 SpotifySetup.exe
+-rwxrwxr-x   1 duck users     7980280 Sep 12  2024 StartMenuReviverSetup.exe
+-rwxrwxr-x   1 duck users     1142128 Sep 12  2024 SteamSetup.exe
+drwxrwsr-x   5 duck users        4096 Apr 17  2025 System Volume Information
+-rwxrwxr-x   1 duck users    89014080 Sep 12  2024 TeamSpeak3-Client-win64-3.5.3.exe
+drwxrwsr-x   6 duck users        4096 Jul 19 04:32 test
+drwxrwsr-x   4 duck users        4096 Dec 30 21:50 .Trash-1000
+drwxrwsr-x   3 duck users        4096 Jun  3  2025 TRS80PI_Stuff
+-rwxrwxr-x   1 duck users  5173065485 Jun  3  2025 TRS80PI_Stuff.zip
+drwsrwsr-x   6 duck users        4096 Dec 30 21:49 tv
+drwxrwsr-x   2 duck users        4096 Sep 30  2024 U-Web
+drwxrwsr-x   2 duck users        4096 Oct 13  2024 Visual-C-Runtimes-All-in-One-Apr-2022
+drwxrwsr-x   2 duck users        4096 Sep 12  2024 Visual-C-Runtimes-All-in-One-Jul-2022
+drwxrwsr-x   8 duck users        4096 Sep 10  2024 vPinball
+drwxrwsr-x   2 duck users        4096 Jan  9  2025 w7
+drwxrwsr-x   2 duck users        4096 Jan 11  2025 w7 Clone
+-rwxrwxr-x   1 duck users      489036 Sep 19  2024 w7fome-qsl-back.png
+-rwxrwxr-x   1 duck users      698688 Sep 19  2024 W7FOM.pdf
+drwxrwsr-x   7 duck users       12288 Sep 15  2024 wargames
+drwxrwsr-x   5 duck users        4096 Jan  7  2025 Weather2
+-rwxrwxr-x   1 duck users      310411 Sep 12  2024 WEN-D-MEEKS.COM_CSA.pdf
+-rwxrwxr-x   1 duck users      108120 Sep 12  2024 Whatsaquackin-Internet.pdf
+-rwxrwxr-x   1 duck users    11413288 Sep 12  2024 WinSCP-5.19.6-Setup.exe
+-rwxrwxr-x   1 duck users     2928936 Sep 12  2024 winzip27.exe
+-rwxrwxr-x   1 duck users     1239752 Sep 12  2024 wlsetup-web.exe
+drwxrwsr-x   3 duck users        4096 Oct 12  2024 WOPR
+drwxrwsr-x   3 duck users        4096 Oct 12  2024 workretirement
+drwxrwsr-x  24 duck users        4096 Mar 10  2025 wwwroot
+drwxrwsr-x   3 duck users        4096 Jan  7  2025 Wxp-NWClient
+drwxrwsr-x   3 duck users        4096 Jan  8  2025 Z80
+-rwxrwxr-x   1 duck users  2066451968 Sep 12  2024 Z80.ova
+drwxrwsr-x   4 duck users        4096 Oct 12  2024 Z80Pack
+drwxrwsr-x   3 duck users        4096 Oct 12  2024 Z80-TRS
+-rwxrwxr-x   1 duck users    11912264 Sep 12  2024 ZoomInstaller.exe
+drwxrwsr-x   2 duck users        4096 Nov 24  2024 zork-new

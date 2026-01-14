@@ -1,0 +1,6 @@
+[Desktop Entry]
+Type=Application
+Name=Newshosting
+Exec=/home/duck/.local/share/Newshosting/3.8.9/newshosting.sh %u
+Icon=/home/duck/.local/share/Newshosting/3.8.9/icon.svg
+StartupNotify=false

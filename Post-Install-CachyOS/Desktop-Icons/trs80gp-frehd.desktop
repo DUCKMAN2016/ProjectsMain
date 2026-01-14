@@ -1,0 +1,9 @@
+[Desktop Entry]
+Version=1.0
+Type=Application
+Name=TRS-80 GP with FreHD
+Comment=TRS-80 Model I/III/4/4P Emulator with FreHD
+Exec=/run/media/duck/extra/User/Documents/FreHd/launch_frehd.sh
+Icon=applications-games
+Terminal=false
+Categories=Game;Emulator;

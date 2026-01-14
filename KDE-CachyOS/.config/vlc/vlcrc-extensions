@@ -1,0 +1,27 @@
+[skins2]
+# Skins2 interface settings (if using skins)
+# Not enabled by default, but configured if needed
+
+[macosx]
+# macOS specific settings (not applicable)
+
+[lua]
+# Lua scripts settings
+# Enable HTTP interface for remote control (optional)
+# http-host=0.0.0.0
+# http-port=8080
+# http-password=vlc
+
+[main]
+# Main VLC settings
+# Single instance mode
+single-instance=1
+# Run in background
+minimize-to-tray=1
+
+[logger]
+# Logging settings
+# Log verbosity (0=quiet, 1=error, 2=warning, 3=notice, 4=debug)
+verbosity=1
+# Log to file
+log-file=~/.cache/vlc/vlc.log.txt

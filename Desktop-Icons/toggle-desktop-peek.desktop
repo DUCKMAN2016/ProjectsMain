@@ -1,0 +1,21 @@
+[Desktop Entry]
+Categories=Utility;
+Comment[en_US]=Toggle between clean desktop and normal view (one-click)
+Comment=Toggle between clean desktop and normal view (one-click)
+Exec=/run/media/duck/extra/User/Downloads/ProjectsMain/Scripts/toggle_desktop_peek.sh
+GenericName[en_US]=
+GenericName=
+Icon=view-split-left-right
+MimeType=
+Name[en_US]=Toggle Desktop Peek
+Name=Toggle Desktop Peek
+NoDisplay=false
+Path=/run/media/duck/extra/User/Downloads/ProjectsMain/Scripts/
+PrefersNonDefaultGPU=false
+StartupNotify=false
+Terminal=false
+TerminalOptions=
+Type=Application
+Version=1.0
+X-KDE-SubstituteUID=false
+X-KDE-Username=

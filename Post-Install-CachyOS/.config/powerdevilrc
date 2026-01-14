@@ -1,0 +1,17 @@
+[AC][SuspendAndShutdown]
+AutoSuspendAction=0
+AutoSuspendTimeout=0
+
+[AC]
+displayTurnOffTime=0
+dimDisplayTime=0
+turnOffDisplayAfterIdle=0
+
+[Battery][SuspendAndShutdown]
+AutoSuspendAction=0
+AutoSuspendTimeout=0
+
+[Battery]  
+displayTurnOffTime=0
+dimDisplayTime=0
+turnOffDisplayAfterIdle=0

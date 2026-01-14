@@ -1,0 +1,10 @@
+[Desktop Entry]
+Version=1.0
+Type=Application
+Name=Power Off
+Comment=Instant power off system
+Exec=poweroff
+Icon=/home/duck/Downloads/power-off.jpg
+Terminal=false
+Categories=System;
+StartupNotify=false

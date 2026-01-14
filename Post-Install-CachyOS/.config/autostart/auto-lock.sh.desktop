@@ -1,0 +1,6 @@
+[Desktop Entry]
+Exec=/home/duck/.config/old-autostart-scripts/auto-lock.sh
+Icon=application-x-executable-script
+Name=auto-lock.sh
+Type=Application
+X-KDE-AutostartScript=true

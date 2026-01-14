@@ -1,0 +1,11 @@
+[Daemon]
+LockGrace=300
+Timeout=15
+
+[Greeter][Wallpaper][org.kde.image][General]
+Image=/home/duck/Pictures/wallpapers_backup/MtFuji.png
+PreviewImage=/home/duck/Pictures/wallpapers_backup/MtFuji.png
+
+[Greeter][PowerManagement]
+PowerOffDelay=0
+PowerOffEnabled=false

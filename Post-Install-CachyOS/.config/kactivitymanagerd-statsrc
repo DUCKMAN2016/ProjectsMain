@@ -1,0 +1,17 @@
+[Favorites-org.kde.plasma.kickoff.favorites.instance-48-6557c081-923b-4e18-ab22-8470133e7c89]
+ordering=preferred://browser,org.kde.kontact.desktop,systemsettings.desktop,org.kde.dolphin.desktop,org.kde.discover.desktop
+
+[Favorites-org.kde.plasma.kickoff.favorites.instance-48-global]
+ordering=preferred://browser,org.kde.kontact.desktop,systemsettings.desktop,org.kde.dolphin.desktop,org.kde.discover.desktop
+
+[Favorites-org.kde.plasma.kickoff.favorites.instance-72-6557c081-923b-4e18-ab22-8470133e7c89]
+ordering=applications:org.kde.dolphin.desktop,applications:systemsettings.desktop,preferred://browser,applications:enpass.desktop,applications:windsurf.desktop,applications:org.kde.konsole.desktop,applications:toggle-desktop-peek.desktop,applications:edex-ui.desktop,applications:jdownloader.desktop,applications:org.kde.kate.desktop,applications:steam.desktop,applications:firefox.desktop,applications:nordvpn-gui.desktop,applications:org.remmina.Remmina.desktop,applications:org.kde.krita.desktop,applications:vlc.desktop,applications:org.kde.yakuake.desktop,applications:doublecmd.desktop,applications:virtualbox.desktop,applications:filezilla.desktop,applications:com.obsproject.Studio.desktop
+
+[Favorites-org.kde.plasma.kickoff.favorites.instance-72-global]
+ordering=applications:org.kde.dolphin.desktop,applications:systemsettings.desktop,preferred://browser,applications:enpass.desktop,applications:windsurf.desktop,applications:org.kde.konsole.desktop,applications:toggle-desktop-peek.desktop,applications:edex-ui.desktop,applications:jdownloader.desktop,applications:org.kde.kate.desktop,applications:steam.desktop,applications:firefox.desktop,applications:nordvpn-gui.desktop,applications:org.remmina.Remmina.desktop,applications:org.kde.krita.desktop,applications:vlc.desktop,applications:org.kde.yakuake.desktop,applications:doublecmd.desktop,applications:virtualbox.desktop,applications:filezilla.desktop,applications:com.obsproject.Studio.desktop
+
+[Favorites-org.kde.plasma.kickoff.favorites.instance-94-6557c081-923b-4e18-ab22-8470133e7c89]
+ordering=applications:org.kde.dolphin.desktop,applications:systemsettings.desktop,preferred://browser,applications:enpass.desktop,applications:windsurf.desktop,applications:org.kde.konsole.desktop,applications:toggle-desktop-peek.desktop,applications:edex-ui.desktop,applications:jdownloader.desktop,applications:org.kde.kate.desktop,applications:steam.desktop,applications:firefox.desktop,applications:nordvpn-gui.desktop,applications:org.remmina.Remmina.desktop,applications:org.kde.krita.desktop,applications:vlc.desktop,applications:org.kde.yakuake.desktop,applications:doublecmd.desktop,applications:virtualbox.desktop,applications:filezilla.desktop,applications:com.obsproject.Studio.desktop
+
+[Favorites-org.kde.plasma.kickoff.favorites.instance-94-global]
+ordering=applications:org.kde.dolphin.desktop,applications:systemsettings.desktop,preferred://browser,applications:enpass.desktop,applications:windsurf.desktop,applications:org.kde.konsole.desktop,applications:toggle-desktop-peek.desktop,applications:edex-ui.desktop,applications:jdownloader.desktop,applications:org.kde.kate.desktop,applications:steam.desktop,applications:firefox.desktop,applications:nordvpn-gui.desktop,applications:org.remmina.Remmina.desktop,applications:org.kde.krita.desktop,applications:vlc.desktop,applications:org.kde.yakuake.desktop,applications:doublecmd.desktop,applications:virtualbox.desktop,applications:filezilla.desktop,applications:com.obsproject.Studio.desktop

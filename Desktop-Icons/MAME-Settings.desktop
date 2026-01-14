@@ -1,0 +1,9 @@
+[Desktop Entry]
+Version=1.0
+Type=Application
+Name=MAME Settings
+Comment=Configure MAME emulator
+Exec=mame
+Icon=preferences-system
+Terminal=false
+Categories=Settings;

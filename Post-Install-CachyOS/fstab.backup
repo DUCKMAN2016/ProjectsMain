@@ -1,0 +1,45 @@
+# /etc/fstab: static file system information.
+#
+# Use 'blkid' to print the universally unique identifier for a device; this may
+# be used with UUID= as a more robust way to name devices that works even if
+# disks are added and removed. See fstab(5).
+#
+# <file system>             <mount point>  <type>  <options>  <dump>  <pass>
+UUID=f50754b5-ca93-4586-90f0-6cae82f0ca01 /              btrfs   subvol=/@,defaults,noatime,compress=zstd,commit=120 0 0
+UUID=f50754b5-ca93-4586-90f0-6cae82f0ca01 /home          btrfs   subvol=/@home,defaults,noatime,compress=zstd,commit=120 0 0
+UUID=f50754b5-ca93-4586-90f0-6cae82f0ca01 /root          btrfs   subvol=/@root,defaults,noatime,compress=zstd,commit=120 0 0
+UUID=f50754b5-ca93-4586-90f0-6cae82f0ca01 /srv           btrfs   subvol=/@srv,defaults,noatime,compress=zstd,commit=120 0 0
+UUID=f50754b5-ca93-4586-90f0-6cae82f0ca01 /var/cache     btrfs   subvol=/@cache,defaults,noatime,compress=zstd,commit=120 0 0
+UUID=f50754b5-ca93-4586-90f0-6cae82f0ca01 /var/tmp       btrfs   subvol=/@tmp,defaults,noatime,compress=zstd,commit=120 0 0
+UUID=f50754b5-ca93-4586-90f0-6cae82f0ca01 /var/log       btrfs   subvol=/@log,defaults,noatime,compress=zstd,commit=120 0 0
+tmpfs                                     /tmp           tmpfs   defaults,noatime,mode=1777 0 0
+
+# SPCC_1TB
+UUID=5907bd8b-2224-427d-a594-a9d87ce5954a /run/media/duck/SPCC_1TB ext4 defaults,noatime 0 2
+
+# Windows drive
+UUID=4800A96C00A961A4 /run/media/duck/windows ntfs-3g uid=1000,gid=1000,umask=022 0 0
+
+# Kubuntu data drive
+UUID=c0e4bdd3-ccf0-4a7d-960f-daf2ba52984e /run/media/duck/ku ext4 defaults,noatime 0 2
+
+# Extra drive
+UUID=f8ff17ec-5808-4c21-a9f1-819ffb59c49c /run/media/duck/extra ext4 defaults,noatime 0 2
+
+# SPCC_1TB
+#UUID=5907bd8b-2224-427d-a594-a9d87ce5954a /run/media/duck/SPCC_1TB ext4 defaults,noatime 0 2
+
+# Kubuntu data drive
+#UUID=9c38847c-0338-4c89-b788-90845356ce3f /run/media/duck/ku ext4 defaults,noatime 0 2
+
+# Extra drive
+#UUID=f8ff17ec-5808-4c21-a9f1-819ffb59c49c /run/media/duck/extra ext4 defaults,noatime 0 2
+
+# SPCC_1TB
+#UUID=5907bd8b-2224-427d-a594-a9d87ce5954a /run/media/duck/SPCC_1TB ext4 defaults,noatime 0 2
+
+# Kubuntu data drive
+#UUID=9c38847c-0338-4c89-b788-90845356ce3f /run/media/duck/ku ext4 defaults,noatime 0 2
+
+# Extra drive
+#UUID=f8ff17ec-5808-4c21-a9f1-819ffb59c49c /run/media/duck/extra ext4 defaults,noatime 0 2

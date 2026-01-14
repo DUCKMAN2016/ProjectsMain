@@ -1,0 +1,10 @@
+[Desktop Entry]
+Version=1.0
+Type=Application
+Name=Refresh Desktop
+Comment=Refresh KDE desktop and panel
+Exec=/run/media/duck/extra/User/Downloads/ProjectsMain/Scripts/refresh-desktop.sh
+Icon=view-refresh
+Terminal=true
+Categories=System;Utility;
+Keywords=refresh;restart;plasma;desktop;

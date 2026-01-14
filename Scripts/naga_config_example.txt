@@ -1,0 +1,19 @@
+# Example config for Razer Naga Hex to map buttons to keyboard keys for gaming
+# Place this in ~/.naga/keyMap.txt after installing
+
+config=defaultConfig
+1 - key=1
+2 - key=2
+3 - key=3
+4 - key=4
+5 - key=5
+6 - key=6
+7 - key=7
+8 - key=8
+9 - key=9
+10 - key=0
+11 - key=minus
+12 - key=equal
+13 - key=F1
+14 - key=F2
+configEnd

@@ -1,0 +1,9 @@
+[Daemon]
+Timeout=15
+
+[Greeter]
+BackgroundImage=/home/duck/Pictures/wallpapers/Anime-Room.png
+
+[Greeter][Wallpaper][org.kde.image][General]
+Image=/home/duck/Pictures/wallpapers_backup/Anime-Room.png
+PreviewImage=/home/duck/Pictures/wallpapers_backup/Anime-Room.png

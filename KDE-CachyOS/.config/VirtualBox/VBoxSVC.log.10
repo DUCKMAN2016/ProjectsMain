@@ -1,0 +1,60 @@
+00:00:00.000401 main     VirtualBox XPCOM Server 7.2.4 r170995 linux.amd64 (Oct 22 2025 16:59:14) release log
+00:00:00.000405 main     Log opened 2026-01-04T06:54:37.734712000Z
+00:00:00.000406 main     Build Type: release
+00:00:00.000408 main     OS Product: Linux
+00:00:00.000410 main     OS Release: 6.18.2-1-cachyos
+00:00:00.000411 main     OS Version: #1 SMP PREEMPT_DYNAMIC Fri, 19 Dec 2025 14:28:57 +0000
+00:00:00.000446 main     DMI Product Name: System Product Name
+00:00:00.000462 main     DMI Product Version: System Version
+00:00:00.000471 main     Firmware type: BIOS
+00:00:00.000513 main     Host RAM: 32071MB (31.3GB) total, 30493MB (29.7GB) available
+00:00:00.000516 main     Executable: /usr/lib/virtualbox/VBoxSVC
+00:00:00.000517 main     Process ID: 1467
+00:00:00.000518 main     Package type: LINUX_64BITS_GENERIC (OSE)
+00:00:00.019251 main     IPC socket path: /tmp/.vbox-duck-ipc/ipcd
+00:00:00.033525 DCon01   VirtualBox: object creation starts
+00:00:00.033620 DCon01   Home directory: '/home/duck/.config/VirtualBox'
+00:00:00.033818 DCon01   Loading settings file "/home/duck/.config/VirtualBox/VirtualBox.xml" with version "1.12-linux"
+00:00:00.034910 DCon01   HostDnsMonitor: initializing
+00:00:00.035094 DCon01   NAT: resolv.conf: nameserver 127.0.0.53
+00:00:00.035104 DCon01   NAT: resolv.conf: ignoring "options edns0 trust-ad"
+00:00:00.035124 DCon01   HostDnsMonitor: updating information
+00:00:00.035143 DCon01   HostDnsMonitor: old information
+00:00:00.035148 DCon01     no server entries
+00:00:00.035154 DCon01     no domain set
+00:00:00.035158 DCon01     no search string entries
+00:00:00.035163 DCon01   HostDnsMonitor: new information
+00:00:00.035169 DCon01     server 1: 127.0.0.53
+00:00:00.035174 DCon01     domain: duckspfsense.local
+00:00:00.035179 DCon01     search string 1: duckspfsense.local
+00:00:00.041453 DCon01   SUPR0QueryVTCaps -> VERR_SVM_DISABLED
+00:00:00.041629 DCon01   VD: VDInit finished with VINF_SUCCESS
+00:00:00.043244 DCon01   Platform architecture set to 'x86'
+00:00:00.045679 DCon01   ERROR [COM]: aRC=NS_ERROR_FAILURE (0x80004005) aIID={e36a5081-a82a-40bd-9e4e-42a44d6ce50f} aComponent={MachineWrap} aText={Runtime error opening '/run/media/duck/ku/VirtualBox-VMs/w10/w10.vbox' for reading VERR_FILE_NOT_FOUND (File not found.).
+00:00:00.045688 DCon01   /build/virtualbox/src/VirtualBox-7.2.4/src/VBox/Main/src-server/MachineImpl.cpp[1000] (nsresult Machine::i_registeredInit())}, preserve=false aResultDetail=0
+00:00:00.046553 DCon01   VirtualBox: object created
+00:00:02.438263 DCon01   Platform architecture set to 'x86'
+00:00:02.438494 DCon01   ERROR [COM]: aRC=NS_ERROR_FAILURE (0x80004005) aIID={e36a5081-a82a-40bd-9e4e-42a44d6ce50f} aComponent={MachineWrap} aText={Runtime error opening '/run/media/duck/ku/VirtualBox-VMs/w10/w10.vbox' for reading VERR_FILE_NOT_FOUND (File not found.).
+00:00:02.438503 DCon01   /build/virtualbox/src/VirtualBox-7.2.4/src/VBox/Main/src-server/MachineImpl.cpp[1000] (nsresult Machine::i_registeredInit())}, preserve=false aResultDetail=0
+00:00:02.439696 DCon03   Platform architecture set to 'x86'
+00:00:02.440051 DCon03   ERROR [COM]: aRC=NS_ERROR_FAILURE (0x80004005) aIID={e36a5081-a82a-40bd-9e4e-42a44d6ce50f} aComponent={MachineWrap} aText={Runtime error opening '/run/media/duck/ku/VirtualBox-VMs/w10/w10.vbox' for reading VERR_FILE_NOT_FOUND (File not found.).
+00:00:02.440058 DCon03   /build/virtualbox/src/VirtualBox-7.2.4/src/VBox/Main/src-server/MachineImpl.cpp[1000] (nsresult Machine::i_registeredInit())}, preserve=false aResultDetail=0
+00:00:02.452120 DCon06   Platform architecture set to 'x86'
+00:00:02.452392 DCon06   ERROR [COM]: aRC=NS_ERROR_FAILURE (0x80004005) aIID={e36a5081-a82a-40bd-9e4e-42a44d6ce50f} aComponent={MachineWrap} aText={Runtime error opening '/run/media/duck/ku/VirtualBox-VMs/w10/w10.vbox' for reading VERR_FILE_NOT_FOUND (File not found.).
+00:00:02.452400 DCon06   /build/virtualbox/src/VirtualBox-7.2.4/src/VBox/Main/src-server/MachineImpl.cpp[1000] (nsresult Machine::i_registeredInit())}, preserve=false aResultDetail=0
+00:00:02.504314 DCon01   Platform architecture set to 'x86'
+00:00:02.504568 DCon01   ERROR [COM]: aRC=NS_ERROR_FAILURE (0x80004005) aIID={e36a5081-a82a-40bd-9e4e-42a44d6ce50f} aComponent={MachineWrap} aText={Runtime error opening '/run/media/duck/ku/VirtualBox-VMs/w10/w10.vbox' for reading VERR_FILE_NOT_FOUND (File not found.).
+00:00:02.504576 DCon01   /build/virtualbox/src/VirtualBox-7.2.4/src/VBox/Main/src-server/MachineImpl.cpp[1000] (nsresult Machine::i_registeredInit())}, preserve=false aResultDetail=0
+00:00:02.508705 DCon06   Platform architecture set to 'x86'
+00:00:02.508939 DCon06   ERROR [COM]: aRC=NS_ERROR_FAILURE (0x80004005) aIID={e36a5081-a82a-40bd-9e4e-42a44d6ce50f} aComponent={MachineWrap} aText={Runtime error opening '/run/media/duck/ku/VirtualBox-VMs/w10/w10.vbox' for reading VERR_FILE_NOT_FOUND (File not found.).
+00:00:02.508947 DCon06   /build/virtualbox/src/VirtualBox-7.2.4/src/VBox/Main/src-server/MachineImpl.cpp[1000] (nsresult Machine::i_registeredInit())}, preserve=false aResultDetail=0
+00:00:02.512296 DCon01   Platform architecture set to 'x86'
+00:00:02.512543 DCon01   ERROR [COM]: aRC=NS_ERROR_FAILURE (0x80004005) aIID={e36a5081-a82a-40bd-9e4e-42a44d6ce50f} aComponent={MachineWrap} aText={Runtime error opening '/run/media/duck/ku/VirtualBox-VMs/w10/w10.vbox' for reading VERR_FILE_NOT_FOUND (File not found.).
+00:00:02.512550 DCon01   /build/virtualbox/src/VirtualBox-7.2.4/src/VBox/Main/src-server/MachineImpl.cpp[1000] (nsresult Machine::i_registeredInit())}, preserve=false aResultDetail=0
+00:00:02.626043 DCon05   WARNING [COM]: aRC=NS_ERROR_FAILURE (0x80004005) aIID={d5dcece0-b202-4416-a138-03502784cc07} aComponent={HostWrap} aText={VirtualBox is not currently allowed to access USB devices.  You can change this by adding your user to the 'vboxusers' group.  Please see the user manual for a more detailed explanation}, preserve=false aResultDetail=0
+00:00:02.714616 DCon05   WARNING [COM]: aRC=NS_ERROR_FAILURE (0x80004005) aIID={d5dcece0-b202-4416-a138-03502784cc07} aComponent={HostWrap} aText={VirtualBox is not currently allowed to access USB devices.  You can change this by adding your user to the 'vboxusers' group.  Please see the user manual for a more detailed explanation}, preserve=false aResultDetail=0
+00:03:17.058799 main     VirtualBox: object deletion starts
+00:03:17.059278 main     HostDnsMonitor: shutting down ...
+00:03:17.059495 main     HostDnsMonitor: shut down
+00:03:17.070205 Watcher  ERROR [COM]: aRC=E_ACCESSDENIED (0x80070005) aIID={2ce10519-3c09-45d8-a12d-e887786146b7} aComponent={VirtualBoxWrap} aText={The object is not ready}, preserve=false aResultDetail=0
+00:03:17.070268 main     VirtualBox: object deleted

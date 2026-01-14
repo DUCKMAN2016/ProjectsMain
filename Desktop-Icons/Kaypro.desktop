@@ -1,0 +1,9 @@
+[Desktop Entry]
+Version=1.0
+Type=Application
+Name=Kaypro Emulator
+Comment=Kaypro Computer Emulator
+Exec=mame kayproii -window -video opengl -resolution 1024x768 -flop1 /run/media/duck/extra/User/pre-reinstall-backup-20260101-093248/user-data/ProjectsMain/kaypro/roms/kpro-ii.td0
+Icon=applications-games
+Terminal=false
+Categories=Game;Emulator;

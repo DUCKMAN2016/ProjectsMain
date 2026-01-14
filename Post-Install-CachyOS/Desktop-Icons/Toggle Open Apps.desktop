@@ -1,0 +1,10 @@
+[Desktop Entry]
+Version=1.0
+Type=Application
+Name=Toggle Open Apps
+Comment=Toggle minimize/restore all open windows
+Exec=/run/media/duck/extra/User/Downloads/ProjectsMain/Scripts/toggle_open_apps.sh
+Icon=window-minimize
+Terminal=false
+Categories=Utility;
+StartupNotify=false

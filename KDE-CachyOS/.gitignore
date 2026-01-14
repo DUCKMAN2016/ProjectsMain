@@ -1,0 +1,16 @@
+# Personal data
+*.keyring
+*.secrets
+*.password
+*.auth
+
+# KDE-specific personal data
+.kde/share/config/kwallet*
+.kde/share/config/kcm*password*
+.kde/share/config/kcm*auth*
+
+# System-specific files
+*.swp
+*.swo
+.DS_Store
+Thumbs.db

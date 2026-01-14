@@ -1,0 +1,6 @@
+gz-archives/
+*.png
+*.jpg
+*.jpeg
+**/CachedData/
+**/.config/Windsurf/

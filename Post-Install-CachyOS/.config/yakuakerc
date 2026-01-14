@@ -1,0 +1,12 @@
+[Appearance]
+BackgroundColorOpacity=70
+Translucency=true
+
+[Behavior]
+OpenAfterStart=true
+
+[Dialogs]
+FirstRun=false
+
+[Window]
+Width=60

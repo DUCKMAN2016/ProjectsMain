@@ -1,0 +1,10 @@
+[Desktop Entry]
+Version=1.0
+Type=Application
+Name=Restore Desktop Icons
+Comment=Restore persistent desktop icon positions
+Exec=/bin/bash "/run/media/duck/extra/User/Downloads/ProjectsMain/Scripts/persistent-desktop-icons.sh" restore
+Hidden=false
+NoDisplay=false
+X-GNOME-Autostart-enabled=true
+StartupNotify=false

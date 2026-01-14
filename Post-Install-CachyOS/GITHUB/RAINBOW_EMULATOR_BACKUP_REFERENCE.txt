@@ -1,0 +1,31 @@
+# DEC Rainbow 100 Emulator - Backup Reference
+
+This directory contains a reference to the latest backup of the DEC Rainbow 100 emulator project.
+
+## Backup Location
+- **Path:** /mnt/SPCC_1TB/Rainbow_Emulator_Backup_20251014_093925
+- **Date:** 2025-10-14 09:39:25
+- **Contents:**
+  - Complete project files
+  - Essential ROMs
+  - Full ROMs backup
+  - Configuration files
+  - Documentation
+
+## How to Restore
+To restore from this backup:
+1. Copy the contents back to your project directory:
+   ```bash
+   cp -r /mnt/SPCC_1TB/Rainbow_Emulator_Backup_20251014_093925/* /path/to/your/project/
+   ```
+
+## Verification
+To verify the backup integrity, use the checksum file:
+```bash
+cd /mnt/SPCC_1TB/Rainbow_Emulator_Backup_20251014_093925/
+md5sum -c backup_checksums.md5
+```
+
+## Notes
+- This is a readme file only. The actual backup is stored at the location specified above.
+- For more information, see the README.md in the backup directory.

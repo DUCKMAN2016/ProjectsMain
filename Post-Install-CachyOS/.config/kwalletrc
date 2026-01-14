@@ -1,0 +1,8 @@
+[Wallet]
+First Use=false
+Enabled=true
+Close When Idle=false
+Close on Screensaver=false
+
+[Auto Allow]
+kdewallet=KWallet Manager

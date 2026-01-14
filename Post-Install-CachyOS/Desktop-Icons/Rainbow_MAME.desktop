@@ -1,0 +1,9 @@
+[Desktop Entry]
+Version=1.0
+Type=Application
+Name=Rainbow MAME
+Comment=Rainbow 100 Emulator
+Exec=/run/media/duck/extra/User/Downloads/ProjectsMain/Rainbow_Emulator_Backup_SPCC1TB/scripts/launch_rainbow.sh
+Icon=applications-games
+Terminal=false
+Categories=Game;Emulator;

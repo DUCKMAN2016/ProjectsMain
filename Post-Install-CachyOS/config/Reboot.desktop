@@ -1,0 +1,10 @@
+[Desktop Entry]
+Version=1.0
+Type=Application
+Name=Reboot
+Comment=Instant reboot system
+Exec=reboot
+Icon=/home/duck/Downloads/reboot.jpg
+Terminal=false
+Categories=System;
+StartupNotify=false

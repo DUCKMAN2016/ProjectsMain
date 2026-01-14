@@ -1,0 +1,329 @@
+total 31044780
+drwxr-xr-x  250 duck duck      20480 Dec 30 23:55 .
+drwxrwxrwx    3 root root       4096 Oct 23 11:17 ..
+drwxrwx---    2 duck duck      20480 Oct 19  2023 10-5-2022
+drwxrwx---   10 duck duck       4096 Sep 18  2023 1MYZ80-WarGames
+drwxrwx---    2 duck duck       4096 Jan 16  2023 2
+-rw-rw----    1 duck duck       7284 Aug  3  2022 2153f9db9eab25c007a13cfd4b785d35.torrent.torrent
+-rw-rw----    1 duck duck      14942 Aug  3  2022 343104878230cbc8ce1c629a59dbe91d.torrent.torrent
+-rw-rw----    1 duck duck         63 Feb 13  2023 360-key.txt
+-rw-rw----    1 duck duck   93844200 May 28  2023 360TS_Setup_11.0.0.1005.exe
+-rw-rw----    1 duck duck    1528800 Aug 11  2023 360TS_Setup_Mini.exe
+-rw-rw----    1 duck duck      18074 Aug  3  2022 3f004d4f0dccf69d3ac00675e8eb7c37.torrent.torrent
+-rw-rw----    1 duck duck     616544 Oct 13  2022 3x.png
+-rw-rw----    1 duck duck    6136220 Jun 20  2015 4_free_family_tree_templates.pdf
+drwxrwx---    2 duck duck       4096 May 14  2023 7300_141
+-rw-rw----    1 duck duck    2866618 May 14  2023 7300_141.zip
+-rw-r--r--    1 duck duck      16384 Feb 19  2024 7601.17514.101119-1850_x64fre_server_langpacks_1-GRMSXLP1_DVD.iso
+-rw-r--r--    1 duck duck      16384 Feb 19  2024 7z2107.exe
+-rw-rw----    1 duck duck   27153424 May  8  2023 8GadgetPackSetup.msi
+drwxrwx---    3 duck duck       4096 Aug  5  2022 a2_infiSTAR
+drwxrwx---    2 duck duck       4096 Aug 17  2022 a2_infiSTAR-NEW
+drwxrwx---   33 duck duck       4096 Aug 27  2023 AAA-Newest-Perfect Server-DayZ
+drwxrwx---   20 duck duck       4096 Aug 25  2022 AAA-NEW-G-SERVER
+-rw-r--r--    1 duck duck   10630520 Feb 19  2024 AAN-2022-6-17_U2.mp3
+-rw-r--r--    1 duck duck   11380053 Feb 19  2024 AAN.mp3
+drwxrwx---    3 duck duck       4096 Feb 21  2023 acdc-tables
+-rw-rw----    1 duck duck        179 Oct 28  2022 Addresses.txt
+drwxrwx---    3 duck duck       4096 Sep 16  2022 Adobe Acrobat 2017 Professional
+drwxrwx---    3 duck duck       4096 Oct  7  2022 Adobe Acrobat Pro DC v21. ... DC v21.007.20102  Fix.nzb 2021
+-rw-rw----    1 duck duck   20386304 Jun 10  2023 Advanced_Port_Scanner_2.5.3869.exe
+-rw-rw----    1 duck duck       4526 Aug  3  2022 af796fbfcc44909334dd4f149649ddfb.torrent.torrent
+drwxrwx---    3 duck duck       4096 Sep 15  2023 Aliens
+drwxrwxrwx    3 duck duck       4096 Feb 19  2024 All Elite Wrestling- Dynamite
+drwxrwxrwx    3 duck duck       4096 Aug 26  2023 All Elite Wrestling- Rampage
+drwxrwx---    2 duck duck       4096 Feb 15  2023 AnyCamKey
+-rw-rw----    1 duck duck   74943600 Jun 11  2023 AnyCam_Setup_x64.exe
+-rw-rw----    1 duck duck         33 Aug  9  2020 api-dog.txt
+drwxrwx---    6 duck duck       4096 Oct  3  2023 Apple2e
+drwxrwx---    8 duck duck       4096 Aug 17  2022 A-ReFresh
+drwxrwx---    2 duck duck       4096 Aug  3  2022 ARMA2 DayZ F.A.B.I.S. Repack 2
+drwxrwx---   13 duck duck       4096 Aug 12  2022 Arma 2 Script Tutorial - Advanced Basics
+drwxrwx---   10 duck duck       4096 Aug 16  2022 ARMA-SERVERS
+-rw-rw----    1 duck duck      48929 Apr 17  2020 arrlorder.pdf
+-rw-rw----    1 duck duck      31019 Apr 16  2020 ARRL.pdf
+drwxrwx---    3 duck duck       4096 Aug 28  2022 ArtBell
+drwxrwxrwx    3 duck duck       4096 Feb 14  2023 audio
+-rw-rw----    1 duck duck     209089 Apr 14  2023 AZGFD-2023-License.pdf
+-rw-rw----    1 duck duck      14168 Sep 17  2019 BacgroundMeeks.jpg
+drwxrwx---    2 duck duck       4096 Sep 23  2023 Backups
+drwxrwx---    4 duck duck       4096 Aug 28  2023 BASIC
+drwxrwx---    2 duck duck       4096 Aug  5  2022 battleeye
+drwxrwx---    4 duck duck       4096 Sep 29  2023 BBS's
+-rw-r--r--    1 duck duck      77824 Feb 19  2024 BERCon.exe
+-rw-------    1 duck duck     110091 Jun 23  2023 bkupnas
+drwxrwx---    3 duck duck       4096 Jul 20  2023 Blackbird_v1.0.85.3_x64
+drwxrwxr-x    4 duck duck       4096 Jun 25  2023 BlueThrustV4
+drwxrwx---    7 duck duck       4096 Oct 13  2023 BMOW
+-rw-rwx---+   1 duck duck     990133 Jun 16  2023 bookmarks-2023-06-16.json
+-rw-r--r--    1 duck duck        853 Feb 19  2024 bpq32.cfg
+drwxrwx---    4 duck duck       4096 Feb 19  2024 BPQ-COPIES
+drwxrwx---    3 duck duck       4096 May 28  2023 BT-Driver
+-rw-rw----    1 duck duck         20 Aug  5  2023 ccleaner.txt
+-rw-rw----    1 duck duck   56205720 Jun 10  2023 ccsetup612.exe
+-rw-r--r--    1 duck duck    1052672 Jul 20  2023 ccsetup612.exe.filepart
+-rw-rw----    1 duck duck    1119467 Jun 16  2023 CCW_Permit_Card_or_Profile_Change_Request.pdf
+-rw-rw----    1 duck duck      15029 Aug  3  2022 cd229376130c629b56e3b3df5e038bdf.torrent.torrent
+drwxrwxr-x    5 duck duck       4096 Feb 20  2024 CDM v2.12.28 WHQL Certified
+-rw-rw----    1 duck duck    8388864 Aug 24  2023 C.DSK
+-rw-rw----    1 duck duck    7400812 Jun 20  2023 CFZ- AAA.ged
+drwxrwx---    2 duck duck       4096 Jul  4  2023 cfz's
+drwxrwx---    2 duck duck       4096 Feb 20  2024 chew
+drwxrwxr-x    6 duck duck      12288 Feb 20  2024 CoinOp.Collections.Arch.Pinball2
+drwxrwxr-x    3 duck duck       4096 Feb 19  2024 CoinOPS Pinball - Standalone
+drwxrwx---    3 duck duck       4096 Feb  1  2023 CoinOpsx-Backup
+-rw-rw----    1 duck duck     250120 Apr 14  2023 Communications-repair-form-new.pdf
+drwxrwx---    3 duck duck       4096 Oct  7  2022 cool
+drwxrwx---    5 duck duck       4096 Aug 25  2023 cpm
+drwxrwx---    3 duck duck       4096 Aug 25  2023 cpmtoolsWin32
+-rw-rw----    1 duck duck     499635 Aug 25  2023 cpmtoolsWin32.zip
+drwxrwxr-x    2 duck duck       4096 Jun 20  2023 Custom-W0CHP-Pi-Star2
+drwxrwx---    2 duck duck       4096 Jun 17  2023 dadsfire
+-rw-rw----    1 duck duck   62793175 Aug  6  2022 DayZ-Epoch-1.0.6.2.zip
+drwxrwxrwx    9 duck duck       4096 Aug 16  2022 DayZ_Epoch_11.Chernarus
+drwxrwxrwx    4 duck duck       4096 Aug  6  2022 dayz-epoch-sql
+-rw-rw----    1 duck duck       3137 Aug 27  2022 dayz_game.bat
+-rw-rw----    1 duck duck       3071 Aug 26  2022 dayz_game.bat.bak
+drwxrwxrwx    8 root root       4096 Aug 10  2022 dayz-stuff
+-rw-rw----    1 duck duck      13164 Aug  3  2022 dfd8848f2857dad2b133bb5c92afee29.torrent (1).torrent
+-rw-rw----    1 duck duck      13164 Aug  3  2022 dfd8848f2857dad2b133bb5c92afee29.torrent.torrent
+-rw-rw----    1 duck duck     411186 Aug 23  2022 DisplayFusion Backup (2022-08-23 @ 09-09, 9.9.0.0, DESKTOP-DTBF99G, SettingsWindow).reg
+drwxrwx---    2 duck duck       4096 Aug 25  2023 doc_html
+-rw-r--r--    1 duck duck        866 Feb 19  2024 Downloads - Shortcut.lnk
+drwxrwx---    2 duck duck       4096 Jun 27  2023 DualMonitorTools-2.9
+-rw-rw----    1 duck duck     316912 Jun 27  2023 DualMonitorTools-2.9.zip
+drwxrwx---   19 duck duck       4096 Jun 26  2023 ducksclan
+drwxrwx---   36 duck duck       4096 Jun 16  2023 ducksnest
+-rw-rw----    1 duck duck     397824 May 19  2023 DWS.exe
+drwxrwx---    3 duck duck       4096 Jun  4  2023 dx1
+-rw-rw----    1 duck duck      57705 Apr 20  2020 dxorder.pdf
+drwxrwx---    2 duck duck       4096 Jun 30  2023 ElectrumSeed
+-rw-r--r--    1 duck duck         363 Jun 30  2023 Electrum Seed.txt
+drwxr-xr-x    7 duck duck       4096 Jul 18 15:21 Enpass
+drwxrwx---    3 duck duck       4096 Sep 10  2023 EnpassBackups
+-rw-r--r--    1 duck duck 5387679744 Nov 16  2021 en-us_windows_10_iot_enterprise_version_21h2_x64_dvd_9efdf454.iso
+-rw-r--r--    1 duck duck   66610757 May 21  2023 ExtraClassBookCD.zip
+-rw-rw----    1 duck duck      36461 Aug  3  2022 f87c4080f570d33dce6361a2946e7a6d.torrent.torrent
+drwxrwx---    4 duck duck       4096 May 21  2023 FaceBook-Zips
+-rw-r--r--    1 duck duck   23695760 Feb 19  2024 FamilyBookCreator2014.exe
+-rw-r--r--    1 duck duck  156662472 Feb 19  2024 FamilyBookCreator2019.exe
+drwxrwx---   31 duck duck      28672 Nov 10  2022 Family Crest
+drwxrwx---   10 duck duck       4096 Sep 15  2022 Family-Crest-full
+drwxrwx---    2 duck duck       4096 Jun 14  2023 FamilyHistoryVideos
+-rw-rw----    1 duck duck      50101 Dec 22  2019 Family Tree 2-2019-12-22-09-42-58.gramps
+-rw-rw----    1 duck duck       5526 Dec 22  2019 Family Tree 2_familylines_graph.gv
+-rw-rw----    1 duck duck    2408356 Jun 20  2015 family-tree-chart-enews.pdf
+-rw-r--r--    1 duck duck         28 Jul 18 14:43 file1.txt
+-rw-r--r--    1 duck duck         28 Jul 18 14:43 file2.txt
+-rw-r--r--    1 duck duck         28 Jul 18 14:43 file3.txt
+-rw-rw----    1 duck duck    4887784 Feb 19  2024 FileZilla_Server_1.4.1_win64-setup.exe
+-rw-rw----    1 duck duck   55589600 Sep 21  2023 Firefox Setup 117.0.1.exe
+-rw-rw----    1 duck duck       1158 Jul 17 16:20 fix_ssh_install.sh
+drwxrwx---    3 duck duck       4096 Oct 14  2023 For-BMOW-Card
+drwxrwx---    2 duck duck       4096 Jun 16  2023 ForMomsBirthday
+drwxrwx---    2 duck duck       4096 Sep 18  2023 Fraom-Linux-Dwns
+drwxrwx---    3 duck duck       4096 Sep 13  2022 FreeCommanderXE-32-en-public_setup
+-rw-rw----    1 duck duck   24945629 Aug  2  2022 FreeCommanderXE-32-en-public_setup.zip
+drwxrwx---    2 duck duck       4096 Jun 25  2023 FreeCommanderXE-32-public_setup
+-rw-rw----    1 duck duck    6136220 Jun 20  2015 free_family_tree_templates - Copy.pdf
+drwxrwx---    4 duck duck       4096 Aug 22  2023 FreHd
+drwxrwx---    2 duck duck       4096 Sep  9  2023 FreHd2
+drwxrwx---    7 duck duck       4096 Oct 13  2023 FreHdUtils1
+drwxrwxr-x   14 duck duck       4096 Feb 21  2024 fRMbpq
+drwxrwxr-x    3 duck duck       4096 Feb 20  2024 frmC
+drwxrwx---    7 duck duck       4096 Jun 17  2023 Frm-D
+drwxrwxr-x    8 duck duck       4096 Aug  3  2023 Frm-FreeNas
+drwxrwx---   13 duck duck       4096 Aug 22  2023 frm-ices
+drwxrwx---   21 duck duck       4096 Jul  2  2023 FrmMAIN
+drwxrwx---   11 duck duck       4096 Aug 24  2023 Frm-Manjaro
+drwxrwx---    3 duck duck       4096 Aug  7  2023 frm-ol-wesrvr
+drwxrwxr-x   20 duck duck       4096 Dec 31 05:42 Frm-SPCC1TB
+drwxrwxrwx   13 duck duck       4096 Jun 10  2023 frm-workstation
+drwxrwx---    5 duck duck       4096 Jan 16  2023 From-C-Windows
+drwxrwx---   13 duck duck       4096 Mar 16  2023 From-E
+drwxrwxr-x    7 duck duck       4096 Aug  7  2023 FromIces
+drwxrwxrwx   32 duck duck       4096 Aug  5  2023 from-j
+drwxrwxr-x    4 duck duck       4096 Aug  6  2023 from-jnos
+drwxrwx---   48 duck duck       4096 Mar  9  2024 From-Linux
+drwxrwx---   19 duck duck       4096 Aug 27  2023 From-PC
+drwxrwx---    6 duck duck       4096 Oct 19  2023 from phone
+drwxrwx---    8 duck duck       4096 Aug 20  2023 From-Phone
+drwxrwxr-x    2 duck duck       4096 Mar 10  2024 From-PiCurrent
+drwxrwx---   13 duck duck       4096 May 14  2023 from-sdcard
+drwxrwx---    4 duck duck       4096 Feb  5  2023 from-ssd
+drwxrwx---    3 duck duck       4096 Jun 30  2023 fromweb-s
+drwxrwxr-x   31 duck duck       4096 Aug 27  2023 from-win7stuff
+-rw-r--r--    1 duck duck  751853520 Feb 19  2024 FTM2017.exe
+-rw-r--r--    1 duck duck  677953467 Feb 19  2024 FTM2017Mac.dmg
+drwxrwxr-x   11 duck duck       4096 Feb 20  2024 FuturePinball
+drwxrwx---    3 duck duck       4096 Jan 21  2023 Game-Codes
+-rw-rw----    1 duck duck       8112 Sep  6  2023 gamesx
+drwxrwx---    2 duck duck       4096 Jun 20  2023 GedComs
+drwxrwx---    2 duck duck       4096 Nov 30  2015 GodMode.{ED7BA470-8E54-465E-825C-99712043E01C}
+drwxrwx---   18 duck duck       4096 Aug 19  2022 G-PORTAL
+drwxrwx---    3 duck duck       4096 Aug  4  2022 GSM7
+-rw-rw----    1 duck duck    5105574 Sep 18  2023 GuruModemMan-v1.0.pdf
+drwxrwx---    4 duck duck       4096 Jul 28  2023 GVF-Videos
+-rw-rw----    1 duck duck      13016 May 26  2020 Ham.png
+drwxrwx---   35 duck duck       4096 Sep  9  2023 Ham-Stuff
+-rw-rw----    1 duck duck   53985280 Oct  9  2023 HDClone.iso
+drwxrwx---    3 duck duck       4096 Sep  4  2023 HDClone X.4 Advanced Edition
+-rw-r--r--    1 duck duck       2447 Mar  9  2024 history1.txt
+drwxrwx---    2 duck duck       4096 Jan 16  2023 Home - Christian Life Fellowship_files
+drwxrwx---    6 duck duck       4096 May 29  2023 html
+-rw-r--r--    1 duck duck         95 Aug  1  2023 Icecast-Ices-Crontab.txt
+drwxrwxrwx    2 duck duck       4096 Aug  7  2023 ices
+-rw-rw----    1 duck duck  251631201 Apr 27  2023 I Got A GMRS Radio And This Happened!!  Retevis RA25 GMRS (1080p_60fps_H264-128kbit_AAC).mp4
+-rw-rw----    1 duck duck    6090752 Apr 27  2023 I Got A GMRS Radio And This Happened!!  Retevis RA25 GMRS (192kbit_AAC).m4a.tmp.part
+-rw-rw----    1 duck duck     153860 Apr 27  2023 I Got A GMRS Radio And This Happened!!  Retevis RA25 GMRS (BQ).jpg
+-rw-rw----    1 duck duck       2422 Apr 27  2023 I Got A GMRS Radio And This Happened!!  Retevis RA25 GMRS (Description).txt
+-rw-rw----    1 duck duck          0 Apr 27  2023 I Got A GMRS Radio And This Happened!!  Retevis RA25 GMRS (English_ASR).srt
+drwxrwx---    5 duck duck       4096 Aug  6  2022 infiSTAR.de A2 (v1452) - 05-08-2022 17-13-32
+drwxrwx---    5 duck duck       4096 Aug 27  2023 infiSTAR.de BRC (v0252) - 05-08-2022 21-12-28
+drwxrwx---    3 duck duck       4096 Aug  6  2022 Infistar-version-free-main
+drwxrwx---    6 duck duck       4096 Aug 13  2022 InfiSTAR-Works
+-rw-r--r--    1 duck duck       8790 Feb 19  2024 init.sqf
+-rw-rw----    1 duck duck   27219904 May  5  2023 iobituninstaller.exe
+drwxrwx---    3 duck duck       4096 Jul 25  2023 iriver
+-rw-rw----    1 duck duck   31389803 Jul 25  2023 iriver_Music_Manager_V3.17_for_Windows.exe
+-rw-rw----    1 duck duck          0 Apr 27  2023 jd_accessCheck_1682634044824
+drwxrwxr-x   16 duck duck       4096 Aug  1  2023 jukebox-pin
+-rw-rw----    1 duck duck       1734 Mar 14  2023 jukebox-pin - Shortcut.lnk
+-rw-rw----    1 duck duck 1444917664 Feb 22  2023 Jukebox.rar
+drwxrwx---    3 duck duck       4096 Sep  5  2023 KEEP-WARGAMES
+drwxrwx---    3 duck duck       4096 Feb 18  2023 kmspico
+-rw-r--r--    1 duck duck    4638970 Feb 17  2023 kmspico.zip
+-rw-rw----    1 duck duck       582 Jun 17  2023 LemoTv.txt
+drwxrwx---   23 duck duck       4096 Jan 16  2023 Linux-Docs
+-rw-rw----    1 duck duck 2923581440 Sep 22  2023 lubuntu-22.04.3-desktop-amd64.iso
+drwxrwx---    4 duck duck       4096 Sep 17  2023 m3se
+drwxrwx---    2 duck duck       4096 Jun  4  2023 Mail-Server
+drwxrwx---    2 duck duck       4096 Aug 24  2023 Manjaro-Iso's
+-rw-rw----    1 duck duck    2635568 May  6  2023 MBSetup(1).exe
+drwxrwx---    2 duck duck       4096 Jun 16  2023 me
+drwxrwx---   14 duck duck       4096 Sep 13  2023 mega
+drwxrwxr-x    8 duck duck       4096 Feb 20  2024 MegaPB
+drwxrwx---   10 duck duck       4096 Jun 26  2023 Microsoft Expression
+drwxrwx---    3 duck duck       4096 Jun 26  2023 Microsoft Expression Web 4
+drwxrwx---    2 duck duck       4096 Jun 17  2023 mom
+drwxrwx---   85 duck duck       4096 Sep 24  2022 Mommas-Pics
+drwxrwx---    2 duck duck       4096 Jun 17  2023 momsoldfire
+drwxrwx---   37 duck duck      20480 Jun  6  2023 Moms-PC
+drwxrwx---   86 duck duck       4096 Jun  6  2023 MomsPics-PC
+drwxrwx---    3 duck duck       4096 May  1  2023 moveswin7stuff
+drwxrwxrwx  156 duck duck      20480 Mar  9  2024 movies
+-rw-rw----    1 duck duck     925170 Oct 20  2019 mozilla.pdf
+drwxrwxrwx  218 duck duck      24576 Mar 22  2024 music
+drwxrwx---    2 duck duck       4096 Apr  8  2023 MVD-Title
+drwxrwx---    4 duck duck       4096 Jun  3  2023 mybb_1834
+-rw-rw----    1 duck duck    2312081 Jun  3  2023 mybb_1834.zip
+-rwxrw-r--    1 duck duck     679423 Oct 11  2022 MyContact.mp4
+drwxrwx---    2 duck duck       4096 Oct  7  2022 MY-Mother
+drwxrwx---    2 duck duck       4096 Oct  7  2022 my-wife
+drwxrwx---    8 duck duck       4096 Sep 12  2023 myz80
+drwxr-xr-x    3 duck duck       4096 Sep 10  2024 myZ80-Copy
+drwxrwx---    2 duck duck       4096 Jun 16  2023 Nas-Webmin
+drwxrwx---    5 duck duck       4096 May  8  2023 nethost-dwns
+drwxrwx---    2 duck duck       4096 Oct  2  2023 new
+drwxrwx---   15 duck duck       4096 Sep 14  2023 New-C
+drwxrwx---    6 duck duck       4096 May 30  2023 New folder (3)
+drwxrwx---    3 duck duck       4096 Jun 15  2023 New-html
+drwxrwx---    2 duck duck       4096 Oct 11  2022 newImages
+drwxrwx---    4 duck duck       4096 Oct  7  2022 New-Meeks-Crest
+drwxrwxrwx    3 duck duck       4096 Aug 25  2023 NewsDwns
+drwxrwxr-x   18 duck duck       4096 Feb 20  2024 NewsHosting
+drwxrwxr-x    4 duck duck       4096 Aug  6  2023 New-tf2-Linux
+drwxrwxr-x    4 duck duck       4096 Oct 16  2024 new-vms
+drwxrwx---    3 duck duck       4096 Jun  4  2023 newweb
+drwxrwx---    3 duck duck       4096 Sep  5  2023 New-WOPR
+drwxrwx---    4 duck duck       4096 Sep 13  2023 New-WOPR-MOVIES
+-rw-rw----    1 duck duck     425304 Jul 14  2022 Ninite FileZilla Firefox Notepad Installer.exe
+drwxrwx---    3 duck duck       4096 Aug 10  2022 Nitrado-Server
+drwxrwx---    3 duck duck       4096 Feb 28  2023 no-vPinball
+-rw-r--r--    1 duck duck    4492824 Feb 19  2024 npp.8.4.Installer.x64.exe
+-rw-rw----    1 duck duck 8043855872 Sep 24  2023 nvme0n1.img
+drwxrwx---    4 duck duck       4096 Aug 29  2022 OGP-Agent-Windows-master
+drwxr-xr-x   31 root root       4096 Aug  1  2022 old-Arma 2 Operation Arrowhead
+drwxrwx---    3 duck duck       4096 Sep  2  2023 OLDZ80WARGAMES
+drwxrwx---    3 duck duck       4096 Aug 10  2023 OLS-WEB
+-rw-rw----    1 duck duck    1908488 Sep 26  2023 OOSU10.exe
+-rw-rw----    1 duck duck   91342424 Sep 25  2023 Opera_95.0.4635.84_Setup.exe
+-rw-r--r--    1 duck duck   10923164 Feb 19  2024 Oracle_VM_VirtualBox_Extension_Pack-6.1.0.vbox-extpack
+-rw-r--r--    1 duck duck   11134336 Feb 19  2024 Oracle_VM_VirtualBox_Extension_Pack-6.1.26-145957.vbox-extpack
+-rw-r--r--    1 duck duck   18678513 Feb 19  2024 Oracle_VM_VirtualBox_Extension_Pack-7.0.8.vbox-extpack
+drwxrwxrwx   25 duck duck       4096 Dec 28 18:23 other
+drwxrwx---    5 duck duck       4096 Aug  5  2023 OTM
+-rw-rw----    1 duck duck     193024 Sep 17  2023 otp411.dsk
+drwxrwx---    9 duck duck       4096 Nov 10  2022 OurFam
+drwxrwxrwx    3 duck duck       4096 Aug 13  2023 Outlander
+drwxrwxr-x    4 duck duck       4096 May 31  2023 p5
+drwxrwxr-x    2 duck duck       4096 Feb 20  2024 pfsense-3-2-22-Works
+drwxrwx---    4 duck duck       4096 Apr 17  2023 Phone Backups
+drwxrwxrwx    6 duck duck       4096 Sep 27  2023 photos
+drwxrwx---    2 duck duck       4096 Sep 14  2023 piBkups
+drwxrwx---    2 duck duck       4096 Oct  7  2022 Pic-Dwnld-Folder
+drwxrwx---   11 duck duck       4096 Jan 20  2023 Pinball-E
+drwxrwx---   11 duck duck       4096 Feb 28  2023 Pinball-Tables
+drwxrwxr-x  469 duck duck    1069056 Feb 20  2024 PINBALLvsARCADE
+drwxrwx---   12 duck duck       4096 Mar 21  2023 pinupBckUp
+-rw-rw----    1 duck duck       3541 Sep 19  2023 pi-passwd-chnge.txt
+drwxrwx---    9 duck duck       4096 Jun 21  2023 Pi-Star-Backups
+-rw-rw-r--    1 duck duck       4096 Jun  1  2023 Pi-Star_Config_ducks-pistar_2023-Jun-01.zip
+-rw-rw-r--    1 duck duck          0 Jun  1  2023 Pi-Star_ducks-pistar_MMDVM-2023-06-02.log
+drwxrwx---    2 duck duck       4096 Sep 19  2023 Pi-Star_OrangePi_Zero_V3.4.17_09-Jan-2019
+drwxrwxr-x    2 duck duck       4096 Jul 19 15:20 plan
+drwxrwx---    9 duck duck       4096 Jun 16  2023 Pop_Cap
+drwxrwx---    3 duck duck       4096 Jun 16  2023 PopCap Games
+drwxrwxr-x    3 duck duck       4096 Jun  3  2025 Projects
+drwxrwx---    2 duck duck       4096 Jun 22  2023 Qrz-Stuff
+drwxrwx---    2 duck duck       4096 Apr 26  2023 RA25
+drwxrwx---    7 duck duck       4096 May 22  2023 RA25-Programming
+-rw-rw-r--    1 duck duck 2058658097 Sep  4  2023 Radio Shack TRS-80 ~ Raspberry Pi emulator, with great software collection.zip
+-rw-rw----    1 duck duck     397959 Oct  5  2022 Ragnar-Lothbrok-snakes-pit-illustration-Histoire-populaire.jpg
+drwxrwx---    2 duck duck       4096 May 30  2023 RegistryBackup
+drwxrwxr-x    2 duck duck       4096 Jun 21  2023 Regular-Pi-Star1
+drwxrwxr-x    2 duck duck       4096 Jun 20  2023 Regular-Pi-Star2
+drwxrwxr-x    2 duck duck       4096 Jun 21  2023 Regular-W0CHP-Pi-Star1
+drwxrwxr-x    2 duck duck       4096 Jun 20  2023 Regular-W0CHP-Pi-Star2
+-rw-r--r--    1 duck duck   17298495 Feb 19  2024 Report2329.mp3
+-rw-r--r--    1 duck duck   19283592 Feb 19  2024 Report.mp3
+drwxrwx---    2 duck duck       4096 Jan  6  2023 Return-Label
+-rw-rw----    1 duck duck     594312 Feb 20  2023 return.pdf
+drwxrwx---    2 duck duck       4096 Aug  8  2023 rm-bpq32-old
+drwxrwxr-x    5 duck duck       4096 Feb 20  2024 RMS Packet
+-rw-r--r--    1 duck duck    1380936 Feb 19  2024 rufus-3.18.exe
+-rw-rw----    1 duck duck    1411144 May  8  2023 rufus-4.0.exe
+-rw-rw----    1 duck duck      41149 Jun 23  2022 [ RUTOR.ORG ] 240581.torrent
+drwxrwxr-x    5 duck duck       4096 Jun 15  2023 SAM
+-rw-rw----    1 duck duck     459163 Feb 27  2023 savings_card_copy.scprintpdf.EC20014001.39804668216.pdf
+drwxrwxr-x   39 duck duck       4096 Jun 15  2023 sbbs
+drwxrwxr-x   36 duck duck       4096 Jun 15  2023 sbbs1
+drwxrwxr-x   36 duck duck       4096 Jun 15  2023 sbbs2
+drwxrwxr-x   39 duck duck       4096 Jun 15  2023 sbbs3
+drwxrwx---   37 duck duck       4096 Aug 20  2023 sbbs - Copy
+drwxrwx---    3 duck duck       4096 Aug 12  2023 sbbs-trnsf
+drwxrwx---    3 duck duck       4096 Sep 13  2023 sbbs - Works
+drwxrwx---    7 duck duck       4096 Oct  1  2023 wargames (works)
+drwxrwx---    7 duck duck       4096 Sep 16  2023 wargames (works2)
+drwxrwx---    3 duck duck       4096 Aug 30  2023 wargamesx
+drwxrwx---    2 duck duck      12288 Oct  7  2022 Wens-Phone-recover-pics-10-5-22
+drwxrwx---   38 duck duck      20480 Oct 15  2022 WhatsAQuackin
+drwxrwx---    2 duck duck       4096 Feb  8  2023 win11-stuff
+drwxrwxr-x    2 duck duck       4096 Jun 25  2023 Windows 10 Permanant Activator KMSpico
+drwxrwx---    2 duck duck       4096 Jun 24  2023 Windows 7 SP1 X64 Ultimate 3in1 OEM ESD en-US JAN 2022
+drwxrwxr-x    3 duck duck       4096 Jun 24  2023 Windows 7 SP1 X64 Ultimat ... te 3in1 OEM ESD en-US JAN 2022
+drwxrwxr-x    3 duck duck       4096 Aug 28  2023 Windows 8.1 Pro VL X86 MULTI6 IE11 Jan2014
+drwxrwx---    5 duck duck       4096 Aug  4  2022 WindowsGSM.ARMA2-master
+-rw-rw----    1 duck duck    1554442 Jun  5  2022 WindowsGSM.ARMA2-master.zip
+drwxrwxr-x    2 duck duck       4096 Feb 20  2024 windows-kms-activator-ultimate-2019 {B4tman}
+drwxrwxr-x    2 duck duck       4096 Feb 20  2024 Windows Loader v2.2.2
+drwxrwx---    2 duck duck       4096 Sep  8  2023 WindowsMovieMaker
+drwxrwx---   14 duck duck       4096 Feb 27  2023 wins-10
+drwxrwx---    5 duck duck       4096 Jan 22  2023 WOPR
+-rw-rw----    1 duck duck         51 Aug 29  2023 WOPR-API-KEY.txt
+-rw-rw----    1 duck duck  127896350 Sep  9  2023 wopr-wargames.mkv
+-rw-r--r--    1 duck duck   10229800 Mar 12  2024 wsjtz_2.3.0.81_armhf.deb
+drwxrwx---   16 duck duck       4096 Sep  3  2023 wwwroot
+-rw-rw----    1 duck duck  151271576 Sep 16  2019 xampp-windows-x64-7.1.31-2-VC14-installer.exe
+-rw-rw----    1 duck duck   80322202 Jun  1  2020 Yaesu FT-891 HF50mhz radio review.mp4
+drwxrwx---    5 duck duck       4096 Sep 28  2023 zorks

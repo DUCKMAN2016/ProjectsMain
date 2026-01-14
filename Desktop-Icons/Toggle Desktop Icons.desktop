@@ -1,0 +1,10 @@
+[Desktop Entry]
+Version=1.0
+Type=Application
+Name=Toggle Desktop Icons
+Comment=Toggle desktop icons visibility
+Exec=/run/media/duck/extra/User/Downloads/ProjectsMain/Scripts/toggle_desktop_icons.sh
+Icon=user-desktop
+Terminal=false
+Categories=Utility;
+StartupNotify=false

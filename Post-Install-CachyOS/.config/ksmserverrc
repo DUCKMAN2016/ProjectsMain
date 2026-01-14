@@ -1,0 +1,26 @@
+[LegacySession: saved at previous logout]
+count=0
+
+[Session: saved at previous logout]
+clientId1=1091ecd66b000176733573500000011670007
+clientId2=1091ecd66b000176758759400000011390002
+clientId3=1091ecd66b000176802489200000011590010
+clientId4=1091ecd66b000176802491800000011590012
+count=4
+discardCommand4[$e]=rm,$HOME/.config/session/dolphin_1091ecd66b000176802491800000011590012_1768044431_597697
+program1=/opt/enpass/Enpass
+program2=firefox
+program3=/usr/lib/virtualbox/VirtualBox
+program4=/usr/bin/dolphin
+restartCommand1=/opt/enpass/Enpass,-session,1091ecd66b000176733573500000011670007_1768044431_597669
+restartCommand2=/usr/lib/firefox/firefox,--sm-client-id,1091ecd66b000176758759400000011390002
+restartCommand3=/usr/lib/virtualbox/VirtualBox,-session,1091ecd66b000176802489200000011590010_1768044431_597687
+restartCommand4=/usr/bin/dolphin,-session,1091ecd66b000176802491800000011590012_1768044431_597697
+restartStyleHint1=0
+restartStyleHint2=0
+restartStyleHint3=0
+restartStyleHint4=0
+userId1=duck
+userId2=duck
+userId3=duck
+userId4=duck

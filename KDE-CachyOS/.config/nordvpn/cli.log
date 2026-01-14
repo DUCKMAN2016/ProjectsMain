@@ -1,0 +1,3 @@
+2026/01/02 01:41:23 [Error] failed to get the feature toggles rpc error: code = Unavailable desc = connection error: desc = "transport: Error while dialing: dial unix /run/nordvpn/nordvpnd.sock: connect: permission denied"
+2026/01/02 01:41:34 [Error] failed to get the feature toggles rpc error: code = Unavailable desc = connection error: desc = "transport: Error while dialing: dial unix /run/nordvpn/nordvpnd.sock: connect: permission denied"
+2026/01/02 01:42:11 [Error] failed to get the feature toggles rpc error: code = Unavailable desc = connection error: desc = "transport: Error while dialing: dial unix /run/nordvpn/nordvpnd.sock: connect: permission denied"

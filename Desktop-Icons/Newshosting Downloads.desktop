@@ -1,0 +1,6 @@
+[Desktop Entry]
+Type=Application
+Name=Newshosting Downloads
+Exec=xdg-open /home/duck/Downloads/Newshosting %u
+Icon=/home/duck/.local/share/Newshosting/3.8.9/downloads.svg
+StartupNotify=false

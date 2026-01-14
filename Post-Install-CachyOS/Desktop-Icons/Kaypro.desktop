@@ -1,0 +1,9 @@
+[Desktop Entry]
+Version=1.0
+Type=Application
+Name=Kaypro Emulator
+Comment=Kaypro Computer Emulator
+Exec=mame kaypro2x -window -video opengl -resolution 1024x768
+Icon=applications-games
+Terminal=false
+Categories=Game;Emulator;

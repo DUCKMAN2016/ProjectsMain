@@ -1,0 +1,10 @@
+[Desktop Entry]
+Version=1.0
+Type=Application
+Name=Cool Retro Term
+Comment=A good looking terminal emulator which mimics the old cathode display
+Exec=cool-retro-term
+Icon=cool-retro-term
+Terminal=false
+Categories=System;TerminalEmulator;Utility;
+Keywords=terminal;retro;crt;vintage;old;

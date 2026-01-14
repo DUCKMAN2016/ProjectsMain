@@ -1,0 +1,10 @@
+[Desktop Entry]
+Version=1.0
+Type=Application
+Name=System Control Panel
+Comment=4x2 grid of system control icons
+Exec=/run/media/duck/extra/User/Downloads/ProjectsMain/Scripts/system_control_panel.sh
+Icon=/home/duck/Downloads/control-panel.jpg
+Terminal=false
+Categories=System;
+StartupNotify=false

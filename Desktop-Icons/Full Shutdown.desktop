@@ -1,0 +1,10 @@
+[Desktop Entry]
+Version=1.0
+Type=Application
+Name=Full Shutdown
+Comment=Shutdown with confirmation and 15 second delay
+Exec=/home/duck/Desktop/simple-full-shutdown.sh
+Icon=/home/duck/Downloads/full-shutdown.jpg
+Terminal=false
+Categories=System;
+StartupNotify=false

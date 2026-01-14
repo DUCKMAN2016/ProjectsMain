@@ -1,0 +1,9 @@
+[Desktop Entry]
+Version=1.0
+Type=Application
+Name=HandBrake
+Comment=Video transcoder
+Exec=handbrake
+Icon=handbrake
+Terminal=false
+Categories=AudioVideo;Video;

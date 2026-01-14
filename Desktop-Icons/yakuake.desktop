@@ -1,0 +1,9 @@
+[Desktop Entry]
+Version=1.0
+Type=Application
+Name=Yakuake
+Comment=Quake-style terminal emulator
+Exec=yakuake
+Icon=yakuake
+Terminal=false
+Categories=System;TerminalEmulator;
