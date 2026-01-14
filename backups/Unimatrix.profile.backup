@@ -1,0 +1,15 @@
+[Appearance]
+ColorScheme=Breeze
+Font=Hack,20,-1,5,50,0,0,0,0,0
+
+[General]
+Name=Unimatrix
+Parent=FALLBACK/
+
+[Scrolling]
+HistoryMode=1
+HistorySize=1000
+ScrollBarPosition=2
+
+[Terminal Features]
+BlinkingCursorEnabled=true
