@@ -322,7 +322,7 @@ kwalletmanager
 - **Media**: VLC, HandBrake, Shotcut, SoundConverter, OBS (with 5 camera scenes: Full, Right-Bottom, Right-Top, Left-Top, Left-Bottom)
 - **Graphics**: Krita
 - **Network**: FileZilla, Remmina, NordVPN, qBittorrent
-- **System**: Octopi, Double Commander, Cool Retro Term
+- **System**: Octopi, Double Commander, Cool Retro Term, Unimatrix (Matrix effect with Japanese characters)
 - **Security**: Falcon sensor
 
 ### KDE Configuration:
@@ -335,6 +335,7 @@ kwalletmanager
 ### Terminal Autostart:
 - **Yakuake**: 9 tabs on boot - shell, yazi, c (eza directory preview with alt+c), eza (ctrl+c), fresh, unimatrix (Japanese katakana Matrix effect), asciiquarium, bonsai.sh, shell
 - **Konsole**: 9 tabs on boot - same as above
+- **Unimatrix Dual Monitor**: `unimatrix-simple` command for dual monitor Matrix effect with Japanese characters
 
 ### Desktop Layout:
 - **4 System Control Icons**: Power Off, Reboot, Full Shutdown, Logout with Firefox integration
@@ -359,10 +360,59 @@ Your system is successfully configured when:
 - ✅ Apps remember their positions (KDE default behavior)
 - ✅ Custom scripts execute properly
 - ✅ Terminal emulators (Yakuake and Konsole) open with 9 configured tabs on boot
+- ✅ Unimatrix dual monitor setup works with `unimatrix-simple` command
+
+---
+
+## 🟢 Unimatrix Dual Monitor Setup
+
+### Overview
+The post-install script now includes a complete dual monitor unimatrix Matrix effect setup with Japanese katakana characters.
+
+### Features
+- **Japanese Katakana Characters**: Authentic Matrix-style half-width katakana (ｦ ｧ ｨ ｩ ｪ ｫ ｬ ｭ ｮ ｯ ｰ ｱ ｲ ｳ ｴ ｵ ｶ ｷ ｸ ｹ ｺ ｻ ｼ ｽ ｾ ｿ ﾀ ﾁ ﾂ ﾃ ﾄ ﾅ ﾆ ﾇ ﾈ ﾉ ﾊ ﾋ ﾌ ﾍ ﾎ ﾏ ﾐ ﾑ ﾒ ﾓ ﾔ ﾕ ﾖ ﾗ ﾘ ﾙ ﾚ ﾛ ﾜ ﾝ)
+- **Green Matrix Color**: Classic green color scheme
+- **Large Font**: Size 20 Hack font for better visibility
+- **Dual Monitor Support**: Launches on both monitors simultaneously
+- **Launcher Control**: Single tab controls both windows with Ctrl+C
+
+### Usage
+```bash
+# Start dual monitor Matrix effect
+unimatrix-simple
+```
+
+### Setup Instructions
+1. Run `unimatrix-simple` - opens new launcher tab
+2. Two unimatrix windows launch automatically
+3. Drag one window to your second monitor
+4. Press F11 on both windows for fullscreen mode
+5. Press Ctrl+C in launcher tab to close both windows
+
+### Files Created
+- `~/.local/bin/unimatrix-simple` - Dual monitor launcher script
+- `~/.local/share/konsole/Unimatrix.profile` - Konsole profile with large font
+- Added to PATH in `~/.zshrc` for easy access
+
+### Integration
+- Automatically installed with post-install script
+- Integrated into terminal autostart tabs
+- Replaces cmatrix for proper Japanese character support
 
 ---
 
 ## 📝 Recent Updates
+
+### January 14, 2026 - Unimatrix Dual Monitor Setup
+- **Added**: Complete dual monitor unimatrix Matrix effect setup to post-install script
+  - Creates `unimatrix-simple` launcher script with dual monitor support
+  - Creates `Unimatrix.profile` konsole profile with large font (size 20)
+  - Japanese katakana characters with green color scheme
+  - Launcher tab controls both windows with Ctrl+C
+  - Automatic PATH configuration for easy access
+- **Updated**: README.md with dedicated unimatrix setup section
+- **Added**: Backups folder with unimatrix setup files
+- **Integration**: Replaces cmatrix for proper Japanese character support
 
 ### January 13, 2026 - Unimatrix and Japanese Fonts Integration
 - **Updated**: Yakuake configuration from 7 to 9 tabs
@@ -412,6 +462,6 @@ Your system is successfully configured when:
 ---
 
 **Created**: January 1, 2026  
-**Last Updated**: January 12, 2026  
+**Last Updated**: January 14, 2026  
 **Compatible**: CachyOS with KDE Plasma  
 **Maintenance**: Update scripts when system configuration changes
