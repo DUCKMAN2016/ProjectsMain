@@ -1,0 +1,10 @@
+[Desktop Entry]
+Version=1.0
+Type=Application
+Name=MYZ80
+Comment=Z80/CP/M Emulator
+Exec=/home/duck/myz80-dosbox-x.sh
+Icon=/home/duck/.local/share/icons/myz80.png
+Terminal=false
+Categories=System;Emulator;
+Keywords=z80;cp/m;emulator;retro;
