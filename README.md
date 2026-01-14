@@ -21,6 +21,13 @@ This repository contains various projects, scripts, and configurations for Cachy
 - **`lost-scripts/`** - Archived/legacy scripts
 - **`GITHUB/`** - GitHub-related scripts and tools
 
+### 🎮 **Emulators**
+- **`emulators/dosbox-x/`** - DOSBox-X configurations for retro computing
+  - `myz80.conf` - Optimized DOSBox-X config for MYZ80 Z80/CP/M emulator
+  - `myz80-dosbox-x.sh` - Launcher script with auto-mount
+  - `myz80.desktop` - Desktop icon with authentic MYZ80 branding
+  - `README.md` - Complete setup and usage documentation
+
 ### 📚 **Documentation**
 - **`docs/`** - Additional documentation files
 - **`FreHd/`** - FreeHD project files
@@ -33,6 +40,12 @@ This repository contains various projects, scripts, and configurations for Cachy
 - **Dual monitor support** with automatic launcher
 - **Green color scheme** with large font
 - **Easy control** with `unimatrix-simple` command
+
+### MYZ80 Z80/CP/M Emulation
+- **DOSBox-X integration** with optimized configuration
+- **Auto-mount** and auto-launch of MYZ80 emulator
+- **Perfect window positioning** for multi-monitor setups
+- **Authentic MYZ80 branding** with original icons
 
 ### System Automation
 - **Complete post-install** script for fresh CachyOS setup
@@ -52,6 +65,23 @@ cd ProjectsMain/Post-Install-CachyOS
 ./cachyos-comprehensive-post-install.sh
 ```
 
+### For MYZ80 Z80/CP/M Emulation:
+```bash
+# Install DOSBox-X (required for MYZ80)
+yay -S dosbox-x
+
+# Copy configuration to local system
+cp emulators/dosbox-x/myz80.conf ~/.config/dosbox-x/
+cp emulators/dosbox-x/myz80.desktop ~/Desktop/
+
+# Ensure MYZ80 files are in place
+mkdir -p ~/myz80
+# Copy your MYZ80 files to ~/myz80/
+
+# Launch MYZ80
+./emulators/dosbox-x/myz80-dosbox-x.sh
+```
+
 ### For Unimatrix Dual Monitor Effect:
 ```bash
 # After post-install setup, run:
@@ -69,6 +99,12 @@ unimatrix-simple
 - System utilities and management tools
 - Desktop automation scripts
 - Network and storage tools
+
+### Emulators
+- **DOSBox-X configurations** for retro computing
+- **MYZ80 setup** with optimized window management
+- **Desktop integration** with authentic icons
+- **Multi-monitor support** with proper positioning
 
 ### Desktop Configuration
 - KDE Plasma themes and effects
@@ -102,6 +138,7 @@ unimatrix-simple
 ## 🔄 Updates
 
 ### Recent Changes:
+- **January 14, 2026**: Added MYZ80 Z80/CP/M emulator with DOSBox-X integration
 - **January 14, 2026**: Added unimatrix dual monitor setup
 - **January 13, 2026**: Updated with Japanese fonts and terminal tools
 - **January 12, 2026**: Post-reinstall session configurations
