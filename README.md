@@ -13,6 +13,12 @@ This repository contains various projects, scripts, and configurations for Cachy
 ### 🖥️ **Desktop Configuration**
 - **`Desktop-Icons/`** - Desktop launcher icons and shortcuts
 - **`KDE-CachyOS/`** - KDE Plasma configuration files
+- **`Desktop_Position_Management/`** - Complete desktop icon and plasma management system
+  - Icon grid planner with 12x6 layout
+  - Plasma shell management with reliable restart
+  - Wallpaper management for dual monitors
+  - Import/export functionality for layouts
+  - Working HTML interfaces with full documentation
 - **`config/`** - System configuration files
 - **`lock-screen-config/`** - Lock screen customization
 
@@ -35,6 +41,15 @@ This repository contains various projects, scripts, and configurations for Cachy
 
 ## 🎯 Key Features
 
+### Desktop Management System
+- **Icon grid planner** with 12x6 visual layout for precise positioning
+- **Plasma shell management** with reliable multi-method restart
+- **Wallpaper management** for dual monitor setups
+- **Import/export functionality** for layout backup and sharing
+- **Chaos testing** for safe desktop icon scrambling
+- **Working HTML interfaces** with no JavaScript errors
+- **Complete documentation** with troubleshooting guides
+
 ### Unimatrix Dual Monitor Setup
 - **Matrix effect** with Japanese katakana characters
 - **Dual monitor support** with automatic launcher
@@ -54,6 +69,24 @@ This repository contains various projects, scripts, and configurations for Cachy
 - **Network storage** auto-mount configuration
 
 ## 🚀 Quick Start
+
+### For Desktop Management System:
+```bash
+# Navigate to the desktop management folder
+cd Desktop_Position_Management
+
+# Open the complete management interface
+xdg-open complete-desktop-management.html
+
+# Import your existing layout (33 icons)
+# Click "📂 Import Layout" and select "desktop_layout_saved.json"
+
+# Test desktop chaos (safe!)
+./mess-up-desktop-fixed.sh
+
+# Restore your desktop
+./simple-restore-original-layout.sh
+```
 
 ### For Fresh CachyOS Installation:
 ```bash
@@ -138,6 +171,7 @@ unimatrix-simple
 ## 🔄 Updates
 
 ### Recent Changes:
+- **January 15, 2026**: Added comprehensive Desktop Management System with icon grid planner, plasma management, and wallpaper controls
 - **January 14, 2026**: Added MYZ80 Z80/CP/M emulator with DOSBox-X integration
 - **January 14, 2026**: Added unimatrix dual monitor setup
 - **January 13, 2026**: Updated with Japanese fonts and terminal tools
@@ -159,4 +193,4 @@ For issues with the post-install scripts:
 **Repository**: ProjectsMain  
 **Purpose**: CachyOS system setup and configuration  
 **Maintainer**: DUCKMAN2016  
-**Last Updated**: January 14, 2026
+**Last Updated**: January 15, 2026
