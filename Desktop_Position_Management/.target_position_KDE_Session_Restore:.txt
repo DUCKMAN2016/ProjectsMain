@@ -1,0 +1,3 @@
+TARGET: KDE Session Restore:
+Position: (2047, 337)
+File: yakuake.desktop

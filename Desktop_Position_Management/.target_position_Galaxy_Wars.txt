@@ -1,0 +1,3 @@
+TARGET: Galaxy Wars
+Position: (1501, 67)
+File: Galaxy-Wars.desktop

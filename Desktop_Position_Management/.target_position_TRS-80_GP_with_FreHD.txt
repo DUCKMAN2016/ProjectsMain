@@ -1,0 +1,3 @@
+TARGET: TRS-80 GP with FreHD
+Position: (1228, 337)
+File: trs80gp-frehd.desktop

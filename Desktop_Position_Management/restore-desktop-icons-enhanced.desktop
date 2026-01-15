@@ -1,0 +1,12 @@
+#!/usr/bin/env xdg-open
+[Desktop Entry]
+Version=1.0
+Type=Application
+Name=Restore Desktop Icons (Enhanced)
+Comment=Restore persistent desktop icon positions with coordinate support
+Exec=/bin/bash "/home/duck/Documents/persistent-desktop-icons-enhanced.sh" restore
+Hidden=false
+NoDisplay=false
+X-GNOME-Autostart-enabled=true
+StartupNotify=false
+Icon=view-visible

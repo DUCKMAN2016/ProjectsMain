@@ -1,0 +1,3 @@
+TARGET: Full Shutdown
+Position: (1228, 67)
+File: Full Shutdown.desktop

@@ -1,0 +1,3 @@
+TARGET: Screenshot Method:
+Position: (2047, 337)
+File: yakuake.desktop

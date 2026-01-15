@@ -1,0 +1,3 @@
+TARGET: Lock Screen
+Position: (2320, 67)
+File: Lock Screen.desktop

@@ -1,0 +1,3 @@
+TARGET: Newshosting
+Position: (409, 202)
+File: Newshosting.desktop

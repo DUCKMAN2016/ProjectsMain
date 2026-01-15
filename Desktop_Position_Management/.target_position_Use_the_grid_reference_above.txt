@@ -1,0 +1,3 @@
+TARGET: Use the grid reference above
+Position: (2047, 337)
+File: yakuake.desktop

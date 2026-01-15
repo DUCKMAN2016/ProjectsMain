@@ -1,0 +1,3 @@
+TARGET: Ms. Pac-Man
+Position: (3139, 67)
+File: Ms-Pac-Man.desktop

@@ -1,0 +1,3 @@
+TARGET: Cool Retro Term
+Position: (409, 67)
+File: Cool_Retro_Term.desktop

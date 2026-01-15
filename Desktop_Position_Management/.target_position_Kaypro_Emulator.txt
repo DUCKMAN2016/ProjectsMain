@@ -1,0 +1,3 @@
+TARGET: Kaypro Emulator
+Position: (2047, 67)
+File: Kaypro.desktop

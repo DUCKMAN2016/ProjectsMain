@@ -1,0 +1,3 @@
+TARGET: qBittorrent
+Position: (2047, 202)
+File: qbittorrent.desktop

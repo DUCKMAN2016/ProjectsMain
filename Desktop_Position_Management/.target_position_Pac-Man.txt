@@ -1,0 +1,3 @@
+TARGET: Pac-Man
+Position: (1501, 202)
+File: Pac-Man.desktop

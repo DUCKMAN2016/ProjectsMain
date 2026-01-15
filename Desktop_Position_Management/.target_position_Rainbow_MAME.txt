@@ -1,0 +1,3 @@
+TARGET: Rainbow MAME
+Position: (2320, 202)
+File: Rainbow_MAME.desktop

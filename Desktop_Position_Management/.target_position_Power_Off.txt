@@ -1,0 +1,3 @@
+TARGET: Power Off
+Position: (1774, 202)
+File: Power Off.desktop

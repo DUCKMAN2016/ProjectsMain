@@ -1,0 +1,3 @@
+TARGET: MAME Settings
+Position: (2866, 67)
+File: MAME-Settings.desktop

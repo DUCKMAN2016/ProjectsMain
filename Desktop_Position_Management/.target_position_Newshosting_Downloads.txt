@@ -1,0 +1,3 @@
+TARGET: Newshosting Downloads
+Position: (682, 202)
+File: Newshosting Downloads.desktop

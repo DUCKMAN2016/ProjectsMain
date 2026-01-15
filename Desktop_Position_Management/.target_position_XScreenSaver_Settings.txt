@@ -1,0 +1,3 @@
+TARGET: XScreenSaver Settings
+Position: (1774, 337)
+File: xscreensaver-settings.desktop

@@ -1,0 +1,49 @@
+# Desktop Icon Layout
+
+Generated: 1/14/2026, 4:49:25 PM
+
+## Row 1
+Col 2: Newshost D
+Col 3: btop
+Col 9: Unimatrix
+Col 10: Toggle Icons
+Col 11: Galaxy Wars
+Col 12: Refresh
+
+## Row 2
+Col 1: Octopi
+Col 2: Newshosting
+Col 3: HandBrake
+Col 9: Logout
+Col 10: Cool Retro
+Col 11: Pac-Man
+Col 12: Toggle Peek
+
+## Row 3
+Col 1: Yakuake
+Col 2: qBittorrent
+Col 3: NordVPN
+Col 10: MYZ80
+Col 11: Ms. Pac-Man
+Col 12: Toggle Apps
+
+## Row 4
+Col 9: NAS-Controls
+Col 10: XScreenSaver
+Col 11: Defender
+Col 12: Full Shut
+
+## Row 5
+Col 8: Steam
+Col 9: MAME Set
+Col 10: Sys Ctrl
+Col 11: DOS Games
+Col 12: Power Off
+
+## Row 6
+Col 8: TRS-80 GP
+Col 9: Kaypro
+Col 10: Rainbow MAME
+Col 11: Lock Screen
+Col 12: Reboot
+

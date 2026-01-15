@@ -1,0 +1,3 @@
+TARGET: Yakuake
+Position: (2047, 337)
+File: yakuake.desktop

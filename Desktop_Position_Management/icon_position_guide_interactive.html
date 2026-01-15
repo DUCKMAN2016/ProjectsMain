@@ -1,0 +1,1523 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interactive Desktop Icon Arranger</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #f5f5f5;
+            margin: 20px;
+            color: #333;
+        }
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        h1 {
+            text-align: center;
+            color: #2c3e50;
+            margin-bottom: 30px;
+        }
+        .workspace {
+            display: flex;
+            gap: 20px;
+            margin-bottom: 20px;
+        }
+        .monitor-section {
+            flex: 2;
+        }
+        .icon-list-section {
+            flex: 1;
+            background: #f8f9fa;
+            padding: 15px;
+            border-radius: 8px;
+            border: 1px solid #dee2e6;
+        }
+        .monitor-container {
+            position: relative;
+            width: 100%;
+            height: 500px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            border: 3px solid #2c3e50;
+            border-radius: 8px;
+            overflow: hidden;
+        }
+        .monitor-label {
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            background: rgba(0,0,0,0.7);
+            color: white;
+            padding: 5px 10px;
+            border-radius: 4px;
+            font-size: 12px;
+            font-weight: bold;
+            z-index: 10;
+        }
+        .taskbar {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 8%;
+            background: linear-gradient(180deg, #2c3e50 0%, #34495e 100%);
+            border-bottom: 2px solid #1a252f;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-weight: bold;
+            font-size: 12px;
+            border-radius: 8px 8px 0 0;
+        }
+        .icon-grid {
+            position: absolute;
+            top: 8%;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            display: grid;
+            grid-template-columns: repeat(12, 1fr);
+            grid-template-rows: repeat(6, 1fr);
+            gap: 2px;
+            padding: 5px;
+        }
+        .grid-cell {
+            background: rgba(255,255,255,0.1);
+            border: 1px dashed rgba(255,255,255,0.3);
+            border-radius: 4px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            transition: all 0.2s ease;
+            position: relative;
+            font-size: 10px;
+            color: rgba(255,255,255,0.6);
+        }
+        .grid-cell:hover {
+            background: rgba(255,255,255,0.2);
+            border-color: rgba(255,255,255,0.6);
+        }
+        .grid-cell.occupied {
+            background: rgba(76, 175, 80, 0.3);
+            border: 1px solid #4caf50;
+        }
+        .grid-cell.occupied:hover {
+            background: rgba(76, 175, 80, 0.5);
+        }
+        .grid-cell.drag-over {
+            background: rgba(33, 150, 243, 0.3);
+            border-color: #2196f3;
+        }
+        .placed-icon {
+            background: rgba(76, 175, 80, 0.8);
+            color: white;
+            padding: 4px 6px;
+            border-radius: 3px;
+            font-size: 9px;
+            font-weight: bold;
+            text-align: center;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            cursor: move;
+            user-select: none;
+        }
+        .icon-list {
+            max-height: 400px;
+            overflow-y: auto;
+        }
+        .icon-list h3 {
+            margin-top: 0;
+            color: #2c3e50;
+            font-size: 16px;
+        }
+        .available-icon {
+            background: #4a90e2;
+            color: white;
+            padding: 8px 12px;
+            margin: 4px 0;
+            border-radius: 4px;
+            cursor: move;
+            user-select: none;
+            transition: all 0.2s ease;
+            font-size: 12px;
+            font-weight: bold;
+        }
+        .available-icon:hover {
+            background: #357abd;
+            transform: translateX(2px);
+        }
+        .available-icon.dragging {
+            opacity: 0.5;
+        }
+        .controls {
+            text-align: center;
+            margin: 20px 0;
+        }
+        .btn {
+            background: #4a90e2;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 4px;
+            cursor: pointer;
+            margin: 0 10px;
+            font-size: 14px;
+            transition: all 0.2s ease;
+        }
+        .btn:hover {
+            background: #357abd;
+            transform: translateY(-1px);
+        }
+        .btn.save {
+            background: #27ae60;
+        }
+        .btn.save:hover {
+            background: #229954;
+        }
+        .btn.reset {
+            background: #e74c3c;
+        }
+        .btn.reset:hover {
+            background: #c0392b;
+        }
+        .btn.clear {
+            background: #f39c12;
+        }
+        .btn.clear:hover {
+            background: #e67e22;
+        }
+        .layout-info {
+            background: #f8f9fa;
+            padding: 15px;
+            border-radius: 8px;
+            margin-top: 20px;
+            font-size: 14px;
+        }
+        
+        .wallpaper-section {
+            background: #e8f4fd;
+            padding: 20px;
+            border-radius: 8px;
+            margin-top: 20px;
+        }
+        
+        .wallpaper-controls h4 {
+            margin: 0 0 15px 0;
+            color: #2c3e50;
+        }
+        
+        .wallpaper-info {
+            background: #f8f9fa;
+            padding: 15px;
+            border-radius: 4px;
+            margin-bottom: 15px;
+        }
+        
+        .wallpaper-info ul {
+            margin: 10px 0;
+            padding-left: 20px;
+        }
+        
+        .wallpaper-list {
+            margin-top: 20px;
+        }
+        
+        .wallpaper-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+            margin-top: 10px;
+        }
+        
+        .wallpaper-section h5 {
+            margin: 0 0 10px 0;
+            color: #34495e;
+            font-size: 16px;
+        }
+        
+        .wallpaper-section ul {
+            margin: 0;
+            padding-left: 20px;
+            max-height: 200px;
+            overflow-y: auto;
+            font-size: 13px;
+        }
+        
+        .wallpaper-section li {
+            margin: 3px 0;
+            color: #555;
+        }
+        
+        .wallpaper-selector {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+            margin-bottom: 20px;
+        }
+        
+        .monitor-selector h5 {
+            margin: 0 0 10px 0;
+            color: #2c3e50;
+        }
+        
+        .wallpaper-select {
+            width: 100%;
+            padding: 8px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            font-size: 14px;
+        }
+        
+        .wallpaper-layout-controls {
+            margin-top: 20px;
+        }
+        
+        .layout-actions {
+            display: flex;
+            gap: 10px;
+            align-items: center;
+            margin-bottom: 20px;
+            flex-wrap: wrap;
+        }
+        
+        .layout-name-input {
+            flex: 1;
+            min-width: 200px;
+            padding: 8px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            font-size: 14px;
+        }
+        
+        .saved-layouts {
+            background: #f8f9fa;
+            padding: 15px;
+            border-radius: 4px;
+            margin-top: 15px;
+        }
+        
+        .saved-layouts h5 {
+            margin: 0 0 10px 0;
+            color: #2c3e50;
+        }
+        
+        .wallpaper-item {
+            cursor: pointer;
+            padding: 3px 8px;
+            margin: 2px 0;
+            border-radius: 3px;
+            transition: background-color 0.2s;
+        }
+        
+        .wallpaper-item:hover {
+            background-color: #e3f2fd;
+        }
+        
+        .wallpaper-item.selected {
+            background-color: #2196f3;
+            color: white;
+        }
+        
+        .plasma-section {
+            background: #fff3e0;
+            padding: 20px;
+            border-radius: 8px;
+            margin-top: 20px;
+        }
+        
+        .plasma-controls h4 {
+            margin: 0 0 15px 0;
+            color: #2c3e50;
+        }
+        
+        .plasma-actions {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+        
+        .plasma-info {
+            background: #f8f9fa;
+            padding: 15px;
+            border-radius: 4px;
+            margin-bottom: 15px;
+        }
+        
+        .plasma-info ul {
+            margin: 10px 0;
+            padding-left: 20px;
+        }
+        
+        .plasma-info h5 {
+            margin: 0 0 10px 0;
+            color: #34495e;
+        }
+        
+        .plasma-buttons {
+            display: flex;
+            gap: 10px;
+            flex-wrap: wrap;
+        }
+        
+        .saved-layout-item {
+            background: #fff;
+            padding: 10px;
+            border-radius: 4px;
+            margin-bottom: 10px;
+            border: 1px solid #ddd;
+        }
+        
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 1000;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0,0,0,0.5);
+        }
+        .modal-content {
+            background: white;
+            margin: 15% auto;
+            padding: 20px;
+            border-radius: 8px;
+            width: 300px;
+            max-height: 400px;
+            overflow-y: auto;
+        }
+        .modal h3 {
+            margin-top: 0;
+            color: #2c3e50;
+        }
+        .icon-option {
+            padding: 8px;
+            margin: 4px 0;
+            background: #f8f9fa;
+            border: 1px solid #dee2e6;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: all 0.2s ease;
+        }
+        .icon-option:hover {
+            background: #4a90e2;
+            color: white;
+        }
+        .stats {
+            background: #e8f4fd;
+            border: 1px solid #bee5eb;
+            border-radius: 4px;
+            padding: 10px;
+            margin: 10px 0;
+            font-size: 12px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Interactive Desktop Icon Arranger</h1>
+        
+        <div class="workspace">
+            <div class="monitor-section">
+                <div class="monitor-container">
+                    <div class="monitor-label">Primary Monitor: 1366x768</div>
+                    <div class="taskbar">Taskbar (Top)</div>
+                    <div class="icon-grid" id="iconGrid">
+                        <!-- 12x6 grid will be generated by JavaScript -->
+                    </div>
+                </div>
+            </div>
+            
+            <div class="icon-list-section">
+                <h3>Available Icons</h3>
+                <div class="stats" id="stats">
+                    <strong>32 icons available</strong><br>
+                    <strong>72 grid positions</strong><br>
+                    <strong>40 empty positions</strong>
+                </div>
+                <div class="icon-list" id="iconList">
+                    <!-- Icon list will be generated by JavaScript -->
+                </div>
+            </div>
+        </div>
+
+        <div class="controls">
+            <button class="btn reset" onclick="resetLayout()">Reset Layout</button>
+            <button class="btn clear" onclick="clearGrid()">Clear Grid</button>
+            <button class="btn save" onclick="saveLayout()">Save Layout</button>
+            <button class="btn" onclick="exportLayout()">Export Coordinates</button>
+            <label class="btn" style="margin: 0 10px;">
+                Load File
+                <input type="file" id="fileInput" accept=".json" style="display: none;" onchange="loadLayoutFromFile(event)">
+            </label>
+        </div>
+        
+        <div class="controls" style="background: #e8f4fd; padding: 15px; border-radius: 8px; margin-top: 20px;">
+            <h4 style="margin: 0 0 10px 0; color: #2c3e50;">Desktop Script Controls (Working Method)</h4>
+            
+            <!-- File Mode Options -->
+            <div style="margin-bottom: 15px; padding: 10px; background: #f8f9fa; border-radius: 4px;">
+                <label style="font-weight: bold; color: #2c3e50;">File Download Mode:</label>
+                <div style="margin-top: 5px;">
+                    <label style="margin-right: 15px;">
+                        <input type="radio" name="fileMode" value="timestamp" checked onchange="setFileMode('timestamp')">
+                        🕐 Timestamped (unique files)
+                    </label>
+                    <label>
+                        <input type="radio" name="fileMode" value="overwrite" onchange="setFileMode('overwrite')">
+                        🔄 Overwrite (single file)
+                    </label>
+                </div>
+            </div>
+            
+            <button class="btn" style="background: #27ae60;" onclick="runDesktopScript('save')">
+                💾 Save Current Layout
+            </button>
+            <button class="btn" style="background: #3498db;" onclick="runDesktopScript('restore')">
+                🔄 Restore to Clean Layout
+            </button>
+            <button class="btn" style="background: #9b59b6;" onclick="runDesktopScript('document')">
+                📄 Document Positions
+            </button>
+            <button class="btn" style="background: #f39c12;" onclick="runDesktopScript('restart-plasma')">
+                🔄 Restart Plasma
+            </button>
+            <button class="btn" style="background: #e74c3c;" onclick="runDesktopScript('emergency-reset')">
+                🚨 Emergency Reset
+            </button>
+            <button class="btn" style="background: #e67e22;" onclick="runDesktopScript('mess-up-desktop')">
+                🌪️ Mess Up Desktop
+            </button>
+            <button class="btn" style="background: #16a085;" onclick="openDesktopManagement()">
+                🖥️ Desktop Management
+            </button>
+            <div id="scriptStatus" style="margin-top: 10px; font-size: 12px; color: #666;"></div>
+        </div>
+        
+        <div class="layout-info" id="layoutInfo">
+            <strong>Current Layout:</strong><br>
+            Drag icons from the list to the grid, or click a grid cell to assign an icon.
+        </div>
+        
+        <div class="wallpaper-section">
+            <h3>🖼️ Wallpaper Management</h3>
+            
+            <div class="wallpaper-controls">
+                <h4>Wallpaper Layout Manager</h4>
+                
+                <!-- Wallpaper Selector -->
+                <div class="wallpaper-selector">
+                    <div class="monitor-selector">
+                        <h5>Monitor 1 (Primary)</h5>
+                        <select id="monitor1-wallpaper" class="wallpaper-select">
+                            <option value="">Select wallpaper...</option>
+                        </select>
+                    </div>
+                    
+                    <div class="monitor-selector">
+                        <h5>Monitor 2</h5>
+                        <select id="monitor2-wallpaper" class="wallpaper-select">
+                            <option value="">Select wallpaper...</option>
+                        </select>
+                    </div>
+                </div>
+                
+                <!-- Layout Controls -->
+                <div class="wallpaper-layout-controls">
+                    <div class="layout-actions">
+                        <input type="text" id="wallpaper-layout-name" placeholder="Enter layout name..." class="layout-name-input">
+                        <button class="btn" style="background: #27ae60;" onclick="saveWallpaperLayout()">
+                            💾 Save Layout
+                        </button>
+                        <button class="btn" style="background: #3498db;" onclick="loadWallpaperLayout()">
+                            📂 Load Layout
+                        </button>
+                        <button class="btn" style="background: #e74c3c;" onclick="applyWallpaperLayout()">
+                            🎨 Apply Layout
+                        </button>
+                    </div>
+                    
+                    <div class="saved-layouts" id="saved-layouts">
+                        <h5>Saved Layouts</h5>
+                        <div id="wallpaper-layouts-list">
+                            <!-- Saved layouts will be populated here -->
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Current Setup Info -->
+                <div class="wallpaper-info">
+                    <p><strong>Current Setup:</strong></p>
+                    <ul>
+                        <li>Monitor 1: <code id="current-monitor1">/home/duck/Pictures/It-Pc.png</code></li>
+                        <li>Monitor 2: <code id="current-monitor2">/home/duck/Pictures/Me-n-MrsFrankenstein.jpg</code></li>
+                    </ul>
+                </div>
+                
+                <!-- Wallpaper List -->
+                <div class="wallpaper-list">
+                    <h4>Available Wallpapers</h4>
+                    <div class="wallpaper-grid">
+                        <div class="wallpaper-section">
+                            <h5>CachyOS Wallpapers</h5>
+                            <ul>
+                                <li class="wallpaper-item" data-path="/usr/share/wallpapers/cachyos-wallpapers/Abstract.png">Abstract.png</li>
+                                <li class="wallpaper-item" data-path="/usr/share/wallpapers/cachyos-wallpapers/BlueFeathers.png">BlueFeathers.png</li>
+                                <li class="wallpaper-item" data-path="/usr/share/wallpapers/cachyos-wallpapers/BlueLady.png">BlueLady.png</li>
+                                <li class="wallpaper-item" data-path="/usr/share/wallpapers/cachyos-wallpapers/BlueNekoLady.png">BlueNekoLady.png</li>
+                                <li class="wallpaper-item" data-path="/usr/share/wallpapers/cachyos-wallpapers/CachyAdventure169.png">CachyAdventure169.png</li>
+                                <li class="wallpaper-item" data-path="/usr/share/wallpapers/cachyos-wallpapers/CachyAdventure219.png">CachyAdventure219.png</li>
+                                <li class="wallpaper-item" data-path="/usr/share/wallpapers/cachyos-wallpapers/'Cachy depths 5K.png'">'Cachy depths 5K.png'</li>
+                                <li class="wallpaper-item" data-path="/usr/share/wallpapers/cachyos-wallpapers/CachyGalaxy99.jpg">CachyGalaxy99.jpg</li>
+                                <li class="wallpaper-item" data-path="/usr/share/wallpapers/cachyos-wallpapers/CachySurf3.jpg">CachySurf3.jpg</li>
+                                <li class="wallpaper-item" data-path="/usr/share/wallpapers/cachyos-wallpapers/CachySurf4.jpg">CachySurf4.jpg</li>
+                                <li class="wallpaper-item" data-path="/usr/share/wallpapers/cachyos-wallpapers/DarkStreaks.png">DarkStreaks.png</li>
+                                <li class="wallpaper-item" data-path="/usr/share/wallpapers/cachyos-wallpapers/Dimensions.png">Dimensions.png</li>
+                                <li class="wallpaper-item" data-path="/usr/share/wallpapers/cachyos-wallpapers/Dracula.png">Dracula.png</li>
+                                <li class="wallpaper-item" data-path="/usr/share/wallpapers/cachyos-wallpapers/GreenFeathers.png">GreenFeathers.png</li>
+                                <li class="wallpaper-item" data-path="/usr/share/wallpapers/cachyos-wallpapers/GreenNekoLady.png">GreenNekoLady.png</li>
+                                <li class="wallpaper-item" data-path="/usr/share/wallpapers/cachyos-wallpapers/Lime-splash.png">Lime-splash.png</li>
+                                <li class="wallpaper-item" data-path="/usr/share/wallpapers/cachyos-wallpapers/Lines.png">Lines.png</li>
+                                <li class="wallpaper-item" data-path="/usr/share/wallpapers/cachyos-wallpapers/Liquid.png">Liquid.png</li>
+                                <li class="wallpaper-item" data-path="/usr/share/wallpapers/cachyos-wallpapers/Metal.png">Metal.png</li>
+                                <li class="wallpaper-item" data-path="/usr/share/wallpapers/cachyos-wallpapers/North.png">North.png</li>
+                                <li class="wallpaper-item" data-path="/usr/share/wallpapers/cachyos-wallpapers/OrangeFeathers.png">OrangeFeathers.png</li>
+                                <li class="wallpaper-item" data-path="/usr/share/wallpapers/cachyos-wallpapers/Paper.png">Paper.png</li>
+                                <li class="wallpaper-item" data-path="/usr/share/wallpapers/cachyos-wallpapers/PinkLady.png">PinkLady.png</li>
+                                <li class="wallpaper-item" data-path="/usr/share/wallpapers/cachyos-wallpapers/PurpleFeathers.png">PurpleFeathers.png</li>
+                                <li class="wallpaper-item" data-path="/usr/share/wallpapers/cachyos-wallpapers/RedNekoLady.png">RedNekoLady.png</li>
+                                <li class="wallpaper-item" data-path="/usr/share/wallpapers/cachyos-wallpapers/Skyscraper.png">Skyscraper.png</li>
+                                <li class="wallpaper-item" data-path="/usr/share/wallpapers/cachyos-wallpapers/Spectrum.png">Spectrum.png</li>
+                                <li class="wallpaper-item" data-path="/usr/share/wallpapers/cachyos-wallpapers/Splash.png">Splash.png</li>
+                                <li class="wallpaper-item" data-path="/usr/share/wallpapers/cachyos-wallpapers/Wave.png">Wave.png</li>
+                                <li class="wallpaper-item" data-path="/usr/share/wallpapers/cachyos-wallpapers/Wave2.png">Wave2.png</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="wallpaper-section">
+                            <h5>Your Pictures</h5>
+                            <ul>
+                                <li class="wallpaper-item" data-path="/home/duck/Pictures/It-Pc.png">It-Pc.png</li>
+                                <li class="wallpaper-item" data-path="/home/duck/Pictures/Lock.jpg">Lock.jpg</li>
+                                <li class="wallpaper-item" data-path="/home/duck/Pictures/Lock.png">Lock.png</li>
+                                <li class="wallpaper-item" data-path="/home/duck/Pictures/Me-n-MrsFrankenstein.jpg">Me-n-MrsFrankenstein.jpg</li>
+                                <li class="wallpaper-item" data-path="/home/duck/Pictures/MtFuji.png">MtFuji.png</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="plasma-section">
+            <h3>🔧 Plasma Management</h3>
+            
+            <div class="plasma-controls">
+                <h4>Plasma Shell Controls</h4>
+                
+                <div class="plasma-actions">
+                    <div class="plasma-info">
+                        <p><strong>Plasma Shell Status:</strong></p>
+                        <ul>
+                            <li>Current Status: <span id="plasma-status">Checking...</span></li>
+                            <li>Version: KDE Plasma 6</li>
+                            <li>Last Restart: <span id="plasma-last-restart">Never</span></li>
+                        </ul>
+                    </div>
+                    
+                    <div class="plasma-buttons">
+                        <button class="btn" style="background: #f39c12;" onclick="runDesktopScript('restart-plasma')">
+                            🔄 Restart Plasma
+                        </button>
+                        <button class="btn" style="background: #e67e22;" onclick="runDesktopScript('safe-restart-plasma')">
+                            🔄 Safe Restart
+                        </button>
+                        <button class="btn" style="background: #c0392b;" onclick="runDesktopScript('kill-plasma')">
+                            💀 Kill Plasma
+                        </button>
+                        <button class="btn" style="background: #9b59b6;" onclick="runDesktopScript('restore-wallpapers')">
+                            🖼️ Restore Wallpapers
+                        </button>
+                        <button class="btn" style="background: #e74c3c;" onclick="runDesktopScript('emergency-reset')">
+                            🚨 Emergency Reset
+                        </button>
+                    </div>
+                    
+                    <div class="plasma-info">
+                        <h5>Plasma Restart Options:</h5>
+                        <ul>
+                            <li><strong>🔄 Restart Plasma:</strong> Quick restart (may have issues)</li>
+                            <li><strong>🔄 Safe Restart:</strong> Extra safety checks</li>
+                            <li><strong>💀 Kill Plasma:</strong> Force kill and restart (works best)</li>
+                            <li><strong>🖼️ Restore Wallpapers:</strong> Fix wallpaper issues</li>
+                            <li><strong>🚨 Emergency Reset:</strong> Restore from backup</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="plasma-info">
+                        <h5>Troubleshooting:</h5>
+                        <ul>
+                            <li>If desktop is blank: Use 💀 Kill Plasma or Emergency Reset</li>
+                            <li>If wallpapers missing: Use Restore Wallpapers</li>
+                            <li>If icons scrambled: Use Desktop Icon tools</li>
+                            <li>If plasmashell crashes: Use 💀 Kill Plasma</li>
+                            <li>If restart hangs: Use 💀 Kill Plasma (most reliable)</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal for icon selection -->
+    <div id="iconModal" class="modal">
+        <div class="modal-content">
+            <h3>Select Icon for Position</h3>
+            <div id="modalIconList"></div>
+            <button class="btn" onclick="closeModal()">Cancel</button>
+        </div>
+    </div>
+
+    <script>
+        // Available icons
+        const availableIcons = [
+            'btop', 'Cool Retro', 'Defender', 'DOS Games', 'Full Shut', 'Galaxy Wars',
+            'HandBrake', 'Kaypro', 'Lock Screen', 'Logout', 'MAME Set', 'Ms. Pac-Man',
+            'MYZ80', 'NAS-Controls', 'Newshosting', 'Newshost D', 'NordVPN', 'Octopi', 'Pac-Man',
+            'Power Off', 'qBittorrent', 'Rainbow MAME', 'Reboot', 'Refresh', 'Steam',
+            'Yakuake', 'Toggle Icons', 'Toggle Peek', 'Toggle Apps', 'Sys Ctrl', 
+            'TRS-80 GP', 'Unimatrix', 'XScreenSaver'
+        ];
+
+        let gridLayout = {};
+        let draggedIcon = null;
+        let originalPosition = null;
+        let layoutData = {};
+        let fileMode = 'timestamp'; // Default mode
+
+        // Set file download mode
+        function setFileMode(mode) {
+            fileMode = mode;
+            const statusDiv = document.getElementById('scriptStatus');
+            if (mode === 'timestamp') {
+                statusDiv.innerHTML = '🕐 <strong>Timestamped mode:</strong> Each download creates a unique file with timestamp';
+            } else {
+                statusDiv.innerHTML = '🔄 <strong>Overwrite mode:</strong> Downloads will overwrite existing files';
+            }
+        }
+
+        // Initialize the application
+        function initializeApp() {
+            createGrid();
+            createIconList();
+            updateStats();
+            loadSavedLayout();
+        }
+
+        // Create 12x6 grid
+        function createGrid() {
+            const grid = document.getElementById('iconGrid');
+            grid.innerHTML = '';
+            
+            for (let row = 0; row < 6; row++) {
+                for (let col = 0; col < 12; col++) {
+                    const cell = document.createElement('div');
+                    cell.className = 'grid-cell';
+                    cell.dataset.row = row + 1;
+                    cell.dataset.col = col + 1;
+                    cell.innerHTML = `R${row+1}C${col+1}`;
+                    
+                    // Add drag and drop events
+                    cell.addEventListener('dragover', handleDragOver);
+                    cell.addEventListener('drop', handleDrop);
+                    cell.addEventListener('dragleave', handleDragLeave);
+                    cell.addEventListener('click', handleCellClick);
+                    
+                    grid.appendChild(cell);
+                }
+            }
+        }
+
+        // Create icon list
+        function createIconList() {
+            const list = document.getElementById('iconList');
+            list.innerHTML = '';
+            
+            availableIcons.forEach(iconName => {
+                const iconElement = document.createElement('div');
+                iconElement.className = 'available-icon';
+                iconElement.draggable = true;
+                iconElement.textContent = iconName;
+                iconElement.dataset.icon = iconName;
+                
+                iconElement.addEventListener('dragstart', handleIconDragStart);
+                iconElement.addEventListener('dragend', handleIconDragEnd);
+                
+                list.appendChild(iconElement);
+            });
+        }
+
+        // Handle icon drag start
+        function handleIconDragStart(e) {
+            draggedIcon = e.target.dataset.icon;
+            e.target.classList.add('dragging');
+            e.dataTransfer.effectAllowed = 'copy';
+        }
+
+        // Handle icon drag end
+        function handleIconDragEnd(e) {
+            e.target.classList.remove('dragging');
+        }
+
+        // Handle drag over grid cell
+        function handleDragOver(e) {
+            e.preventDefault();
+            e.dataTransfer.dropEffect = 'copy';
+            e.target.classList.add('drag-over');
+        }
+
+        // Handle drag leave
+        function handleDragLeave(e) {
+            e.target.classList.remove('drag-over');
+        }
+
+        // Handle drop on grid cell
+        function handleDrop(e) {
+            e.preventDefault();
+            e.target.classList.remove('drag-over');
+            
+            if (draggedIcon && !e.target.classList.contains('occupied')) {
+                placeIconInCell(e.target, draggedIcon);
+            }
+        }
+
+        // Handle cell click for modal selection
+        function handleCellClick(e) {
+            const cell = e.target.closest('.grid-cell');
+            if (!cell.classList.contains('occupied')) {
+                selectedCell = cell;
+                showModal();
+            }
+        }
+
+        // Show modal for icon selection
+        function showModal() {
+            const modal = document.getElementById('iconModal');
+            const modalList = document.getElementById('modalIconList');
+            
+            modalList.innerHTML = '';
+            availableIcons.forEach(iconName => {
+                const option = document.createElement('div');
+                option.className = 'icon-option';
+                option.textContent = iconName;
+                option.onclick = () => selectIcon(iconName);
+                modalList.appendChild(option);
+            });
+            
+            modal.style.display = 'block';
+        }
+
+        // Close modal
+        function closeModal() {
+            document.getElementById('iconModal').style.display = 'none';
+            selectedCell = null;
+        }
+
+        // Select icon from modal
+        function selectIcon(iconName) {
+            if (selectedCell) {
+                placeIconInCell(selectedCell, iconName);
+            }
+            closeModal();
+        }
+
+        // Place icon in cell
+        function placeIconInCell(cell, iconName) {
+            const row = parseInt(cell.dataset.row);
+            const col = parseInt(cell.dataset.col);
+            const key = `${row}-${col}`;
+            
+            // Remove icon from previous position if it exists
+            const previousPosition = Object.keys(gridLayout).find(k => gridLayout[k] === iconName);
+            if (previousPosition) {
+                delete gridLayout[previousPosition];
+                const [prevRow, prevCol] = previousPosition.split('-').map(Number);
+                const prevCell = document.querySelector(`[data-row="${prevRow}"][data-col="${prevCol}"]`);
+                if (prevCell) {
+                    prevCell.classList.remove('occupied');
+                    prevCell.innerHTML = `R${prevRow}C${prevCol}`;
+                }
+            }
+            
+            // Place icon in new position
+            gridLayout[key] = iconName;
+            cell.classList.add('occupied');
+            cell.innerHTML = `<div class="placed-icon">${iconName}</div>`;
+            
+            updateLayoutInfo();
+            updateStats();
+        }
+
+        // Update layout info
+        function updateLayoutInfo() {
+            const layoutInfo = document.getElementById('layoutInfo');
+            let html = '<strong>Current Layout:</strong><br>';
+            
+            for (let row = 1; row <= 6; row++) {
+                html += `Row ${row}: `;
+                for (let col = 1; col <= 12; col++) {
+                    const key = `${row}-${col}`;
+                    const icon = gridLayout[key];
+                    html += icon ? `${icon} | ` : '[empty] | ';
+                }
+                html += '<br>';
+            }
+            
+            layoutInfo.innerHTML = html;
+        }
+
+        // Update statistics
+        function updateStats() {
+            const placedCount = Object.keys(gridLayout).length;
+            const emptyCount = 72 - placedCount;
+            const availableCount = availableIcons.length;
+            
+            document.getElementById('stats').innerHTML = `
+                <strong>${availableCount} icons available</strong><br>
+                <strong>${placedCount} icons placed</strong><br>
+                <strong>${emptyCount} empty positions</strong>
+            `;
+        }
+
+        // Reset layout
+        function resetLayout() {
+            if (confirm('Reset to original saved layout?')) {
+                loadSavedLayout();
+            }
+        }
+
+        // Clear grid
+        function clearGrid() {
+            if (confirm('Clear all icons from the grid?')) {
+                gridLayout = {};
+                createGrid();
+                updateLayoutInfo();
+                updateStats();
+            }
+        }
+
+        // Save layout
+        function saveLayout() {
+            // Save to localStorage
+            localStorage.setItem('desktopGridLayout', JSON.stringify(gridLayout));
+            
+            // Auto-save to file
+            saveLayoutToFile();
+            
+            alert('Layout saved successfully! (Both localStorage and file)');
+        }
+
+        // Save layout to file
+        function saveLayoutToFile() {
+            const layoutData = {
+                timestamp: new Date().toISOString(),
+                gridSize: "12x6",
+                totalPositions: 72,
+                placedIcons: Object.keys(gridLayout).length,
+                layout: gridLayout
+            };
+            
+            const jsonContent = JSON.stringify(layoutData, null, 2);
+            const blob = new Blob([jsonContent], { type: 'application/json' });
+            const url = URL.createObjectURL(blob);
+            
+            const a = document.createElement('a');
+            a.href = url;
+            a.download = 'desktop_layout_saved.json';
+            a.style.display = 'none';
+            document.body.appendChild(a);
+            a.click();
+            document.body.removeChild(a);
+            URL.revokeObjectURL(url);
+        }
+
+        // Load saved layout
+        function loadSavedLayout() {
+            const saved = localStorage.getItem('desktopGridLayout');
+            if (saved) {
+                gridLayout = JSON.parse(saved);
+                // Apply saved layout to grid
+                Object.keys(gridLayout).forEach(key => {
+                    const [row, col] = key.split('-').map(Number);
+                    const cell = document.querySelector(`[data-row="${row}"][data-col="${col}"]`);
+                    if (cell) {
+                        const iconName = gridLayout[key];
+                        cell.classList.add('occupied');
+                        cell.innerHTML = `<div class="placed-icon">${iconName}</div>`;
+                    }
+                });
+                updateLayoutInfo();
+                updateStats();
+            }
+        }
+
+        // Load layout from file
+        function loadLayoutFromFile(event) {
+            const file = event.target.files[0];
+            if (file) {
+                const reader = new FileReader();
+                reader.onload = function(e) {
+                    try {
+                        const data = JSON.parse(e.target.result);
+                        if (data.layout) {
+                            gridLayout = data.layout;
+                            // Clear grid and apply loaded layout
+                            createGrid();
+                            Object.keys(gridLayout).forEach(key => {
+                                const [row, col] = key.split('-').map(Number);
+                                const cell = document.querySelector(`[data-row="${row}"][data-col="${col}"]`);
+                                if (cell) {
+                                    const iconName = gridLayout[key];
+                                    cell.classList.add('occupied');
+                                    cell.innerHTML = `<div class="placed-icon">${iconName}</div>`;
+                                }
+                            });
+                            updateLayoutInfo();
+                            updateStats();
+                            alert(`Layout loaded from file: ${file.name}`);
+                        }
+                    } catch (error) {
+                        alert('Error loading file: Invalid format');
+                    }
+                };
+                reader.readAsText(file);
+            }
+        }
+
+        // Export layout
+        function exportLayout() {
+            let exportText = '# Desktop Icon Layout\n\n';
+            exportText += 'Generated: ' + new Date().toLocaleString() + '\n\n';
+            
+            for (let row = 1; row <= 6; row++) {
+                exportText += `## Row ${row}\n`;
+                for (let col = 1; col <= 12; col++) {
+                    const key = `${row}-${col}`;
+                    const icon = gridLayout[key];
+                    if (icon) {
+                        exportText += `Col ${col}: ${icon}\n`;
+                    }
+                }
+                exportText += '\n';
+            }
+            
+            // Create download
+            const blob = new Blob([exportText], { type: 'text/plain' });
+            const url = URL.createObjectURL(blob);
+            const a = document.createElement('a');
+            a.href = url;
+            a.download = 'desktop_layout.txt';
+            document.body.appendChild(a);
+
+// Export layout
+function exportLayout() {
+    let exportText = '# Desktop Icon Layout\n\n';
+    exportText += 'Generated: ' + new Date().toLocaleString() + '\n\n';
+    
+    for (let row = 1; row <= 6; row++) {
+        exportText += `## Row ${row}\n`;
+        for (let col = 1; col <= 12; col++) {
+            const key = `${row}-${col}`;
+            const icon = gridLayout[key];
+            if (icon) {
+                exportText += `Col ${col}: ${icon}\n`;
+            }
+        }
+        exportText += '\n';
+    }
+    
+    // Create download
+    const blob = new Blob([exportText], { type: 'text/plain' });
+    const url = URL.createObjectURL(blob);
+    const a = document.createElement('a');
+    a.href = url;
+    a.download = 'desktop_layout.txt';
+    document.body.appendChild(a);
+    a.click();
+    document.body.removeChild(a);
+    URL.revokeObjectURL(url);
+}
+
+// Run desktop script - show command instead of downloading
+        function runDesktopScript(action) {
+            const statusDiv = document.getElementById('scriptStatus');
+            
+            let command = '';
+            let description = '';
+            
+            switch(action) {
+                case 'save':
+                    command = './simple-restore-original-layout.sh';
+                    description = 'Save current desktop icon layout';
+                    break;
+                case 'restore':
+                    command = './simple-restore-original-layout.sh';
+                    description = 'Restore desktop icons from backup';
+                    break;
+                case 'document':
+                    command = '../Post-Install-CachyOS/Scripts/document_desktop_positions_with_coords.sh';
+                    description = 'Document current desktop positions';
+                    break;
+                case 'emergency-reset':
+                    command = './ultra-safe-desktop-icons.sh emergency-reset';
+                    description = 'Emergency reset from backup';
+                    break;
+                case 'mess-up-desktop':
+                    command = './mess-up-desktop.sh';
+                    description = 'Scramble desktop icons for testing';
+                    break;
+                case 'restart-plasma':
+                    command = './kill-plasma-reliable.sh';
+                    description = 'Restart plasma shell (reliable method)';
+                    break;
+                case 'safe-restart-plasma':
+                    command = './restart-plasma.sh';
+                    description = 'Safe restart with extra checks';
+                    break;
+                case 'kill-plasma':
+                    command = './kill-plasma.sh';
+                    description = 'Force kill and restart plasma (works best)';
+                    break;
+                case 'restore-wallpapers':
+                    command = './kde-wallpaper-fix.sh';
+                    description = 'Restore wallpaper configuration';
+                    break;
+                default:
+                    statusDiv.innerHTML = '❌ Unknown action';
+                    return;
+            }
+            
+            // Show the command to run
+            statusDiv.innerHTML = `
+                ✅ <strong>Command Ready:</strong><br>
+                📋 <strong>Action:</strong> ${description}<br>
+                💻 <strong>Run this command in terminal:</strong><br>
+                <code style="background: #f0f0f0; padding: 5px; border-radius: 3px; display: inline-block; margin: 5px 0;">${command}</code><br>
+                📁 <strong>Current directory:</strong> /run/media/duck/extra/User/Downloads/ProjectsMain/Desktop_Position_Management<br>
+                🔄 <strong>Make sure you're in the correct directory before running!</strong>
+            `;
+        }
+
+        // Open desktop management HTML
+        function openDesktopManagement() {
+            const statusDiv = document.getElementById('scriptStatus');
+            
+            statusDiv.innerHTML = `
+                🖥️ <strong>Opening Desktop Management...</strong><br>
+                📋 <strong>Action:</strong> Launch working desktop management interface<br>
+                💻 <strong>File:</strong> desktop-management-working.html<br>
+                📁 <strong>Location:</strong> /run/media/duck/extra/User/Downloads/ProjectsMain/Desktop_Position_Management<br>
+                🔄 <strong>Features:</strong> All working buttons, plasma restart, desktop controls<br>
+                <br>
+                <a href="desktop-management-working.html" target="_blank" style="background: #16a085; color: white; padding: 8px 15px; border-radius: 5px; text-decoration: none; display: inline-block; margin: 5px 0;">
+                    🖥️ Open Desktop Management
+                </a>
+                <br><br>
+                <small>💡 Click the link above to open the working desktop management interface in a new tab</small>
+            `;
+        }
+
+        // Initialize wallpaper layouts
+        let wallpaperLayouts = {};
+        let currentWallpaperLayout = {
+            monitor1: '/home/duck/Pictures/It-Pc.png',
+            monitor2: '/home/duck/Pictures/Me-n-MrsFrankenstein.jpg'
+        };
+            
+            const a = document.createElement('a');
+            a.href = url;
+            a.download = filename;
+            a.style.display = 'none';
+            document.body.appendChild(a);
+            a.click();
+            document.body.removeChild(a);
+
+switch(action) {
+    case 'save':
+        command = './simple-restore-original-layout.sh';
+        description = 'Save current desktop icon layout';
+        break;
+    case 'restore':
+        command = './simple-restore-original-layout.sh';
+        description = 'Restore desktop icons from backup';
+        break;
+    case 'document':
+        command = '../Post-Install-CachyOS/Scripts/document_desktop_positions_with_coords.sh';
+        description = 'Document current desktop positions';
+        break;
+    case 'emergency-reset':
+        command = './ultra-safe-desktop-icons.sh emergency-reset';
+        description = 'Emergency reset from backup';
+        break;
+    case 'mess-up-desktop':
+        command = './mess-up-desktop.sh';
+        description = 'Scramble desktop icons for testing';
+        break;
+    case 'restart-plasma':
+        command = './restart-plasma.sh';
+        description = 'Restart plasma shell (may have issues)';
+        break;
+    case 'safe-restart-plasma':
+        command = './restart-plasma.sh';
+        description = 'Safe restart with extra checks';
+        break;
+    case 'kill-plasma':
+        command = './kill-plasma.sh';
+        description = 'Force kill and restart plasma (works best)';
+        break;
+    case 'restore-wallpapers':
+        command = './kde-wallpaper-fix.sh';
+        description = 'Restore wallpaper configuration';
+        break;
+    default:
+        statusDiv.innerHTML = '❌ Unknown action';
+        return;
+}
+
+// Show the command to run
+statusDiv.innerHTML = `
+    ✅ <strong>Command Ready:</strong><br>
+    📋 <strong>Action:</strong> ${description}<br>
+    💻 <strong>Run this command in terminal:</strong><br>
+    <code style="background: #f0f0f0; padding: 5px; border-radius: 3px; display: inline-block; margin: 5px 0;">${command}</code><br>
+    📁 <strong>Current directory:</strong> /run/media/duck/extra/User/Downloads/ProjectsMain/Desktop_Position_Management<br>
+    🔄 <strong>Make sure you're in the correct directory before running!</strong>
+`;
+}
+            const monitor2Select = document.getElementById('monitor2-wallpaper');
+            
+            // Add wallpaper options to dropdowns
+            const wallpaperItems = document.querySelectorAll('.wallpaper-item');
+            wallpaperItems.forEach(item => {
+                const path = item.getAttribute('data-path');
+                const name = item.textContent;
+                
+                // Add to Monitor 1 dropdown
+                const option1 = document.createElement('option');
+                option1.value = path;
+                option1.textContent = name;
+                monitor1Select.appendChild(option1);
+                
+                // Add to Monitor 2 dropdown
+                const option2 = document.createElement('option');
+                option2.value = path;
+                option2.textContent = name;
+                monitor2Select.appendChild(option2);
+            });
+            
+            // Add click handlers for wallpaper items
+            wallpaperItems.forEach(item => {
+                item.addEventListener('click', function() {
+                    // Remove previous selection
+                    document.querySelectorAll('.wallpaper-item').forEach(i => i.classList.remove('selected'));
+                    // Add selection to clicked item
+                    this.classList.add('selected');
+                });
+            });
+            
+            // Load saved layouts
+            loadWallpaperLayouts();
+        }
+
+        // Save wallpaper layout
+        function saveWallpaperLayout() {
+            const layoutName = document.getElementById('wallpaper-layout-name').value.trim();
+            if (!layoutName) {
+                alert('Please enter a layout name');
+                return;
+            }
+            
+            const monitor1 = document.getElementById('monitor1-wallpaper').value;
+            const monitor2 = document.getElementById('monitor2-wallpaper').value;
+            
+            if (!monitor1 || !monitor2) {
+                alert('Please select wallpapers for both monitors');
+                return;
+            }
+            
+            wallpaperLayouts[layoutName] = {
+                monitor1: monitor1,
+                monitor2: monitor2,
+                timestamp: new Date().toISOString()
+            };
+            
+            // Save to localStorage
+            localStorage.setItem('wallpaperLayouts', JSON.stringify(wallpaperLayouts));
+            
+            // Update UI
+            loadWallpaperLayouts();
+            
+            // Clear input
+            document.getElementById('wallpaper-layout-name').value = '';
+            
+            alert(`Wallpaper layout "${layoutName}" saved successfully!`);
+        }
+
+        // Load wallpaper layouts
+        function loadWallpaperLayouts() {
+            const saved = localStorage.getItem('wallpaperLayouts');
+            if (saved) {
+                wallpaperLayouts = JSON.parse(saved);
+            }
+            
+            // Update UI
+            const layoutsList = document.getElementById('wallpaper-layouts-list');
+            layoutsList.innerHTML = '';
+            
+            Object.keys(wallpaperLayouts).forEach(name => {
+                const layout = wallpaperLayouts[name];
+                const layoutDiv = document.createElement('div');
+                layoutDiv.className = 'saved-layout-item';
+                layoutDiv.innerHTML = `
+                    <strong>${name}</strong> (${new Date(layout.timestamp).toLocaleDateString()})
+                    <br>
+                    <small>M1: ${layout.monitor1.split('/').pop()}</small>
+                    <small>M2: ${layout.monitor2.split('/').pop()}</small>
+                    <button class="btn" style="font-size: 12px; padding: 4px 8px; margin-left: 10px;" onclick="loadWallpaperLayoutByName('${name}')">Load</button>
+                    <button class="btn" style="font-size: 12px; padding: 4px 8px; margin-left: 5px; background: #e74c3c;" onclick="deleteWallpaperLayout('${name}')">Delete</button>
+                    <button class="btn" style="font-size: 12px; padding: 4px 8px; margin-left: 5px; background: #27ae60;" onclick="downloadCurrentWallpaperLayout()">📥 Download Current</button>
+                `;
+                layoutsList.appendChild(layoutDiv);
+            });
+        }
+
+        // Load wallpaper layout by name
+        function loadWallpaperLayoutByName(name) {
+            const layout = wallpaperLayouts[name];
+            if (!layout) return;
+            
+            // Set dropdown values
+            document.getElementById('monitor1-wallpaper').value = layout.monitor1;
+            document.getElementById('monitor2-wallpaper').value = layout.monitor2;
+            
+            // Update current layout
+            currentWallpaperLayout = layout;
+            
+            alert(`Loaded wallpaper layout: ${name}`);
+        }
+
+        // Delete wallpaper layout
+        function deleteWallpaperLayout(name) {
+            if (confirm(`Delete wallpaper layout "${name}"?`)) {
+                delete wallpaperLayouts[name];
+                localStorage.setItem('wallpaperLayouts', JSON.stringify(wallpaperLayouts));
+                loadWallpaperLayouts();
+            }
+        }
+
+        // Download current wallpaper layout
+        function downloadCurrentWallpaperLayout() {
+            const timestamp = new Date().toISOString().replace(/[:.]/g, '-').slice(0, 19);
+            const layoutName = `wallpaper-layout-${timestamp}`;
+            
+            const layoutContent = {
+                name: layoutName,
+                timestamp: new Date().toISOString(),
+                monitor1: currentWallpaperLayout.monitor1,
+                monitor2: currentWallpaperLayout.monitor2,
+                description: "Current wallpaper layout configuration"
+            };
+            
+            // Create markdown documentation
+            const markdownContent = `# Wallpaper Layout - ${layoutName}
+
+**Generated:** ${new Date().toLocaleString()}
+
+## Current Wallpaper Configuration
+
+### Monitor 1 (Primary)
+- **Path:** \`${currentWallpaperLayout.monitor1}\`
+- **File:** \`${currentWallpaperLayout.monitor1.split('/').pop()}\`
+
+### Monitor 2
+- **Path:** \`${currentWallpaperLayout.monitor2}\`
+- **File:** \`${currentWallpaperLayout.monitor2.split('/').pop()}\`
+
+## Restoration Instructions
+
+### Option 1: Use the HTML Interface
+1. Open \`icon_position_guide_interactive.html\`
+2. Go to Wallpaper Management section
+3. Load this layout from the saved layouts
+
+### Option 2: Manual Restoration
+1. Right-click on desktop → Configure Desktop → Wallpaper
+2. Set Monitor 1 to: \`${currentWallpaperLayout.monitor1}\`
+3. Set Monitor 2 to: \`${currentWallpaperLayout.monitor2}\`
+
+### Option 3: Script Method
+\`\`\`bash
+#!/bin/bash
+# Apply wallpaper layout
+qdbus6 org.kde.plasmashell /PlasmaShell org.kde.PlasmaShell.evaluateScript "
+var allDesktops = desktops();
+for (i=0;i<allDesktops.length;i++) {
+    d = allDesktops[i];
+    if (d.screen === 0) {
+        d.wallpaperPlugin = 'org.kde.image';
+        d.currentConfigGroup = Array('Wallpaper', 'org.kde.image', 'General');
+        d.writeConfig('Image', 'file://${currentWallpaperLayout.monitor1}');
+    } else if (d.screen === 1) {
+        d.wallpaperPlugin = 'org.kde.image';
+        d.currentConfigGroup = Array('Wallpaper', 'org.kde.image', 'General');
+        d.writeConfig('Image', 'file://${currentWallpaperLayout.monitor2}');
+    }
+}
+"
+\`\`\`
+
+---
+*Generated by Desktop Position Management System*
+`;
+
+            // Download JSON file
+            const jsonBlob = new Blob([JSON.stringify(layoutContent, null, 2)], { type: 'application/json' });
+            const jsonUrl = URL.createObjectURL(jsonBlob);
+            const jsonA = document.createElement('a');
+            jsonA.href = jsonUrl;
+            jsonA.download = `${layoutName}.json`;
+            jsonA.style.display = 'none';
+            document.body.appendChild(jsonA);
+            jsonA.click();
+            document.body.removeChild(jsonA);
+            URL.revokeObjectURL(jsonUrl);
+
+            // Download Markdown file
+            const markdownBlob = new Blob([markdownContent], { type: 'text/markdown' });
+            const markdownUrl = URL.createObjectURL(markdownBlob);
+            const markdownA = document.createElement('a');
+            markdownA.href = markdownUrl;
+            markdownA.download = `${layoutName}.md`;
+            markdownA.style.display = 'none';
+            document.body.appendChild(markdownA);
+            markdownA.click();
+            document.body.removeChild(markdownA);
+            URL.revokeObjectURL(markdownUrl);
+
+            alert(`Current wallpaper layout downloaded to:\n• ${layoutName}.json (data file)\n• ${layoutName}.md (documentation)\n\nFiles saved to your Downloads folder.`);
+        }
+
+        // Apply wallpaper layout
+        function applyWallpaperLayout() {
+            const monitor1 = document.getElementById('monitor1-wallpaper').value;
+            const monitor2 = document.getElementById('monitor2-wallpaper').value;
+            
+            if (!monitor1 || !monitor2) {
+                alert('Please select wallpapers for both monitors');
+                return;
+            }
+            
+            // Create temporary script
+            const scriptContent = `#!/bin/bash
+# Generated wallpaper script
+echo "Setting wallpapers..."
+qdbus6 org.kde.plasmashell /PlasmaShell org.kde.PlasmaShell.evaluateScript "
+var allDesktops = desktops();
+for (i=0;i<allDesktops.length;i++) {
+    d = allDesktops[i];
+    if (d.screen === 0) {
+        d.wallpaperPlugin = 'org.kde.image';
+        d.currentConfigGroup = Array('Wallpaper', 'org.kde.image', 'General');
+        d.writeConfig('Image', 'file://${monitor1}');
+    } else if (d.screen === 1) {
+        d.wallpaperPlugin = 'org.kde.image';
+        d.currentConfigGroup = Array('Wallpaper', 'org.kde.image', 'General');
+        d.writeConfig('Image', 'file://${monitor2}');
+    }
+}
+"
+echo "Wallpapers applied! Restart plasmashell if needed."
+`;
+            
+            // Create and download script
+            const blob = new Blob([scriptContent], { type: 'text/plain' });
+            const url = URL.createObjectURL(blob);
+            
+            const a = document.createElement('a');
+            a.href = url;
+            a.download = 'apply-wallpapers.sh';
+            a.style.display = 'none';
+            document.body.appendChild(a);
+            a.click();
+            document.body.removeChild(a);
+            URL.revokeObjectURL(url);
+            
+            // Update current layout display
+            currentWallpaperLayout = { monitor1, monitor2 };
+            updateCurrentWallpaperDisplay();
+            
+            alert('Wallpaper script downloaded! Run it to apply the wallpapers.');
+        }
+
+        // Update current wallpaper display
+        function updateCurrentWallpaperDisplay() {
+            document.getElementById('current-monitor1').textContent = currentWallpaperLayout.monitor1;
+            document.getElementById('current-monitor2').textContent = currentWallpaperLayout.monitor2;
+        }
+
+        // Check plasma status
+        function checkPlasmaStatus() {
+            const statusSpan = document.getElementById('plasma-status');
+            const lastRestartSpan = document.getElementById('plasma-last-restart');
+            
+            // Check if plasmashell is running
+            const isRunning = checkIfPlasmaRunning();
+            
+            if (isRunning) {
+                statusSpan.textContent = 'Running';
+                statusSpan.style.color = '#27ae60';
+                
+                // Update last restart time
+                const lastRestart = localStorage.getItem('plasma-last-restart');
+                if (lastRestart) {
+                    const date = new Date(lastRestart);
+                    lastRestartSpan.textContent = date.toLocaleString();
+                } else {
+                    lastRestartSpan.textContent = 'Unknown';
+                }
+            } else {
+                statusSpan.textContent = 'Not Running';
+                statusSpan.style.color = '#e74c3c';
+                lastRestartSpan.textContent = 'Never';
+            }
+        }
+
+        // Check if plasmashell is running
+        function checkIfPlasmaRunning() {
+            // Browser can't execute shell commands directly
+            // Just return true for display purposes
+            return true;
+        }
+
+        // Initialize when page loads
+        document.addEventListener('DOMContentLoaded', function() {
+            initializeApp();
+            initializeWallpaperSelector();
+            updateCurrentWallpaperDisplay();
+            checkPlasmaStatus();
+            
+            // Check plasma status every 5 seconds
+            setInterval(checkPlasmaStatus, 5000);
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,3 @@
+TARGET: Logout
+Position: (2593, 67)
+File: Logout.desktop

@@ -1,0 +1,3 @@
+TARGET: NordVPN
+Position: (955, 202)
+File: nordvpn-gui.desktop

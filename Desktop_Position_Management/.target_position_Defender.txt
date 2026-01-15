@@ -1,0 +1,3 @@
+TARGET: Defender
+Position: (682, 67)
+File: Defender.desktop

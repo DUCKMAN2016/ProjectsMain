@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Test Buttons</title>
+    <style>
+        body { font-family: Arial, sans-serif; padding: 20px; }
+        .btn { padding: 10px 15px; margin: 5px; border: none; border-radius: 5px; cursor: pointer; color: white; }
+        .btn:hover { opacity: 0.8; }
+        #status { margin: 20px 0; padding: 10px; background: #f0f0f0; border-radius: 5px; }
+    </style>
+</head>
+<body>
+    <h1>Desktop Management Test</h1>
+    
+    <div class="controls">
+        <button class="btn" style="background: #c0392b;" onclick="showCommand('kill-plasma')">
+            💀 Kill Plasma
+        </button>
+        <button class="btn" style="background: #e67e22;" onclick="showCommand('mess-up-desktop')">
+            🌪️ Mess Up Desktop
+        </button>
+        <button class="btn" style="background: #3498db;" onclick="showCommand('restore')">
+            🔄 Restore Desktop
+        </button>
+    </div>
+    
+    <div id="status">Click a button to see the command...</div>
+    
+    <script>
+        function showCommand(action) {
+            const statusDiv = document.getElementById('scriptStatus') || document.getElementById('status');
+            
+            const commands = {
+                'kill-plasma': './kill-plasma-reliable.sh',
+                'mess-up-desktop': './mess-up-desktop.sh',
+                'restore': './simple-restore-original-layout.sh'
+            };
+            
+            const descriptions = {
+                'kill-plasma': 'Force kill and restart plasma (reliable method)',
+                'mess-up-desktop': 'Scramble desktop icons for testing',
+                'restore': 'Restore desktop icons from backup'
+            };
+            
+            const command = commands[action];
+            const description = descriptions[action];
+            
+            statusDiv.innerHTML = `
+                ✅ <strong>Command Ready:</strong><br>
+                📋 <strong>Action:</strong> ${description}<br>
+                💻 <strong>Run this command in terminal:</strong><br>
+                <code style="background: #f0f0f0; padding: 5px; border-radius: 3px; display: inline-block; margin: 5px 0;">${command}</code><br>
+                📁 <strong>Current directory:</strong> /run/media/duck/extra/User/Downloads/ProjectsMain/Desktop_Position_Management<br>
+                🔄 <strong>Make sure you're in the correct directory before running!</strong>
+            `;
+        }
+    </script>
+</body>
+</html>

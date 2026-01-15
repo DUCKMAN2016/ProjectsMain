@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Desktop Management - Working Version</title>
+    <style>
+        body { font-family: Arial, sans-serif; padding: 20px; }
+        .btn { padding: 10px 15px; margin: 5px; border: none; border-radius: 5px; cursor: pointer; color: white; }
+        .btn:hover { opacity: 0.8; }
+        #status { margin: 20px 0; padding: 10px; background: #f0f0f0; border-radius: 5px; }
+        .section { margin: 30px 0; padding: 20px; border: 1px solid #ddd; border-radius: 8px; }
+        .section h3 { margin-top: 0; color: #2c3e50; }
+    </style>
+</head>
+<body>
+    <h1>Desktop Management System</h1>
+    
+    <div class="section">
+        <h3>🖥️ Desktop Icon Controls</h3>
+        <div class="controls">
+            <button class="btn" style="background: #27ae60;" onclick="showCommand('save')">
+                💾 Save Current Layout
+            </button>
+            <button class="btn" style="background: #3498db;" onclick="showCommand('restore')">
+                🔄 Restore to Clean Layout
+            </button>
+            <button class="btn" style="background: #9b59b6;" onclick="showCommand('document')">
+                📄 Document Positions
+            </button>
+            <button class="btn" style="background: #e67e22;" onclick="showCommand('mess-up-desktop')">
+                🌪️ Mess Up Desktop
+            </button>
+            <button class="btn" style="background: #e74c3c;" onclick="showCommand('emergency-reset')">
+                🚨 Emergency Reset
+            </button>
+        </div>
+    </div>
+    
+    <div class="section">
+        <h3>🔧 Plasma Management</h3>
+        <div class="controls">
+            <button class="btn" style="background: #f39c12;" onclick="showCommand('restart-plasma')">
+                🔄 Restart Plasma
+            </button>
+            <button class="btn" style="background: #c0392b;" onclick="showCommand('kill-plasma')">
+                💀 Kill Plasma
+            </button>
+            <button class="btn" style="background: #9b59b6;" onclick="showCommand('restore-wallpapers')">
+                🖼️ Restore Wallpapers
+            </button>
+        </div>
+    </div>
+    
+    <div id="status">Click a button to see the command...</div>
+    
+    <script>
+        function showCommand(action) {
+            const statusDiv = document.getElementById('status');
+            
+            const commands = {
+                'save': './simple-restore-original-layout.sh',
+                'restore': './simple-restore-original-layout.sh',
+                'document': '../Post-Install-CachyOS/Scripts/document_desktop_positions_with_coords.sh',
+                'emergency-reset': './ultra-safe-desktop-icons.sh emergency-reset',
+                'mess-up-desktop': './mess-up-desktop.sh',
+                'restart-plasma': 'cd /run/media/duck/extra/User/Downloads/ProjectsMain/Desktop_Position_Management && ./kill-plasma-reliable.sh',
+                'kill-plasma': './kill-plasma.sh',
+                'restore-wallpapers': './kde-wallpaper-fix.sh'
+            };
+            
+            const descriptions = {
+                'save': 'Save current desktop icon layout',
+                'restore': 'Restore desktop icons from backup',
+                'document': 'Document current desktop positions',
+                'emergency-reset': 'Emergency reset from backup',
+                'mess-up-desktop': 'Scramble desktop icons for testing',
+                'restart-plasma': 'Restart plasma shell (reliable method)',
+                'kill-plasma': 'Force kill and restart plasma',
+                'restore-wallpapers': 'Restore wallpaper configuration'
+            };
+            
+            const command = commands[action];
+            const description = descriptions[action];
+            
+            statusDiv.innerHTML = `
+                ✅ <strong>Command Ready:</strong><br>
+                📋 <strong>Action:</strong> ${description}<br>
+                💻 <strong>Run this command in terminal:</strong><br>
+                <code style="background: #f0f0f0; padding: 5px; border-radius: 3px; display: inline-block; margin: 5px 0;">${command}</code><br>
+                📁 <strong>Current directory:</strong> /run/media/duck/extra/User/Downloads/ProjectsMain/Desktop_Position_Management<br>
+                🔄 <strong>Make sure you're in the correct directory before running!</strong>
+            `;
+        }
+    </script>
+</body>
+</html>

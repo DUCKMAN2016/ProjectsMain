@@ -1,0 +1,3 @@
+TARGET: MYZ80
+Position: (136, 202)
+File: myz80.desktop
